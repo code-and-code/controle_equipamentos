@@ -6,7 +6,7 @@ return [
     'timezone' => 'UTC',
 
     'database' => [ 'host'     => '127.0.0.1',
-        'dbname'   => 'start',
+        'dbname'   => 'equipamentos',
         'username' => 'root',
         'password' =>  '123456'
     ],
