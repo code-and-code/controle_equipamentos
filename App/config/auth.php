@@ -2,7 +2,7 @@
 
 return [
     'auth' => [
-        'class'          => 'App\Models\User',
+        'class'          => 'App\Models\Usuario',
         'viewLogin'      => 'login',
         'viewRegister'   => 'register',
         'required'       => ['email','password'],
