@@ -1,5 +1,5 @@
 {
-    "name": "codeandcode/start",
+    "name": "codeandcode/controle_equipamentos",
     "license": "MIT",
     "require": {
         "php": ">=5.3",
@@ -11,7 +11,7 @@
     },
     "authors": [
         {
-            "name": "CodeAndCode",
+            "name": "Code&Code",
             "email": "contato@codeandcode.com.br"
         }
     ],
