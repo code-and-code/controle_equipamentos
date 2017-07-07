@@ -19,7 +19,7 @@ trait CrudControllerTrait
 
     public function index()
     {
-        echo $this->render("{$this->getNameModel()}.index", [[$this->getNameModel() => $this->getModelClass()->all()]]);
+        echo $this->render("{$this->getNameModel()}.index", ['results' => $this->getModelClass()->all()]);
     }
 
     public function create()

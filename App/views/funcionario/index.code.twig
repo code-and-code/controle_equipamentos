@@ -21,17 +21,19 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>xxxxx</td>
-                                <td>xxxxx</td>
-                                <td>xxxxx</td>
-                                <td>xxxxx</td>
-                                <td>xxxxx</td>
-                                <td>
-                                    <a href="edit.html.twig" class="fa fa-edit text-info"></a>
-                                    <a href="edit.html.twig" class="fa fa-trash text-danger"></a>
-                                </td>
-                            </tr>
+                            {% for  funcionario in results %}
+                                <tr>
+                                    <td>{{ funcionario.nome }}</td>
+                                    <td>{{ funcionario.email }}</td>
+                                    <td>{{ funcionario.telefone }}</td>
+                                    <td>{{ funcionario.ramal }}</td>
+                                    <td>{{ funcionario.setor_id }}</td>
+                                    <td>
+                                        <a href="funcionario/editar" class="fa fa-edit text-info"></a>
+                                        <a href="edit.html.twig" class="fa fa-trash text-danger"></a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
                             </tbody>
                         </table>
                     </div>
