@@ -9,95 +9,104 @@
     <title>{Start By Code&Code}</title>
 
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../assets/css/bootstrap-theme.css">
-
-
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet" type="text/css">
-
-<style>
-    body {
-        font-family: 'Lato';
-        margin-bottom: 60px;
-    }
-    .footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        height: 80px;
-        background-color: #e0e0e0;
-        text-align: center;
-        padding-top: 10px;
-    }
-</style>
-
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
-<body id="app-layout">
+<body>
 
-
-<nav class="navbar navbar-default">
+<div class="navbar navbar-default navbar-static-top">
     <div class="container">
         <div class="navbar-header">
-
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                <span class="sr-only">Toggle Navigation</span>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-
-
-            <a class="navbar-brand" href="/"></a>
+            <a class="navbar-brand" href="#"><span>Logo</span></a>
         </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <div class="dropdown navbar-brand">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                        <span class="fa fa-fw fa-navicon"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        {% if guest() == true %}
 
-        <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                            {{ include(view('auth._infologin')) }}
 
-            <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-            </ul>
-            <ul class="nav navbar-nav">
-                <li><a href="/contact">Contato</a></li>
-            </ul>
+                        {% else %}
 
-                <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="/auth"> Login <i class="fa fa-fw fa-user pull-right"></i></a>
+                            </li>
 
-                {% if guest() == true %}
-
-                   {{ include(view('auth._infologin')) }}
-
-                {% else %}
-
-                    <li><a href="/auth">Entrar</a></li>
-
-                {% endif %}
-                </ul>
-
-            </div>
-        </div>
-    </nav>
-
-<div class="container">
-
-    {% block content %}{% endblock %}
-
+                        {% endif %}
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right"></ul>
+    </div>
 </div>
 
+    {% if guest() == true %}
 
-<footer class="footer">
-    <div class="container ">
-        <p class="text-muted"> <img src="../../assets/images/miniLogo.png"> Direitos Autorais © 2016 - <a href="http://codeandcode.com.br" target="_blank">{ Code&Code }</a>. Todos os direitos reservados ®. | <a href="https://github.com/code-and-code/start">DOCS</a>
-            <a href="https://github.com/code-and-code?tab=repositories" target="_blank" class="btn btn-social-icon btn-sm btn-github">
-                <span class = "fa fa-github"> </span>
-            </a>
-            <a class="btn btn-social-icon btn-sm btn-facebook">
-                <span class = "fa fa-facebook"> </span>
-            </a>
-            <a class="btn btn-social-icon btn-sm btn-google">
-                <span class = "fa fa-google"> </span>
-            </a>
-        </p>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="nav nav-justified nav-pills">
+                        <li class="active">
+                            <a href="/index.html">Funcionarios</a>
+                        </li>
+                        <li >
+                            <a href="index.html">Periféricos</a>
+                        </li>
+                        <li >
+                            <a href="../computadores/index.html">Computadores</a>
+                        </li>
+                        <li>
+                            <a href="../monitores/index.html"> Monitores </a>
+                        </li>
+                        <li>
+                            <a href="../patrimonios/índex.html"> Patrimônios </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-</footer>
+
+    {% endif %}
+
+    <div class="section">
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+
+    <footer class="section section-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h1>Controle Equipamentos</h1>
+                    <p>
+                        Esse sistema serve exclusivamente para control de equipamentos empresariais. <br>
+                        Colaboradores : Adriano Vianna, Angelo Biscola
+                    </p>
+                </div>
+                <div class="col-sm-12">
+                    <div class="row">
+                         <img src="../../assets/images/miniLogo.png"> Direitos Autorais © 2016 - <a href="http://codeandcode.com.br" target="_blank">{ Code&Code }</a>. Todos os direitos reservados ®. | <a href="https://github.com/code-and-code/start" class="text-warning">DOCS</a>
+                            <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+                            <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
