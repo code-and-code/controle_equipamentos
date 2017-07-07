@@ -35,8 +35,8 @@ trait CrudControllerTrait
 
         }catch (\Exception $e)
         {
-            $this->addCacheLog($e->getMessage());
-            echo $this->render("{$this->getNameModel()}.create", ['error' => 'Não foi possível realizar esta operação']);
+            $error = $this->addCacheLog($e->getMessage());
+            echo $this->render("{$this->getNameModel()}.create", ['error' => 'Não foi possível realizar esta operação,','code' => $error ]);
         }
     }
 
@@ -48,8 +48,8 @@ trait CrudControllerTrait
 
         }catch (\Exception $e)
         {
-            $this->addCacheLog($e->getMessage());
-            echo $this->render("{$this->getNameModel()}.create", ['error' => 'NÃ£o foi possivel realizar esse operaÃ§Ã£o']);
+            $error = $this->addCacheLog($e->getMessage());
+            echo $this->render("{$this->getNameModel()}.create", ['error' => 'Não foi possível realizar esta operação,','code' => $error ]);
         }
     }
 
@@ -63,8 +63,8 @@ trait CrudControllerTrait
 
         }catch (\Exception $e)
         {
-            $this->addCacheLog($e->getMessage());
-            echo $this->render("{$this->getNameModel()}.edit", ['error' => 'NÃ£o foi possivel realizar esse operaÃ§Ã£o']);
+            $error = $this->addCacheLog($e->getMessage());
+            echo $this->render("{$this->getNameModel()}.create", ['error' => 'Não foi possível realizar esta operação,','code' => $error ]);
         }
     }
 
@@ -77,13 +77,15 @@ trait CrudControllerTrait
 
         }catch (\Exception $e)
         {
-            $this->addCacheLog($e->getMessage());
-            echo $this->render("{$this->getNameModel()}.index", ['error' => 'NÃ£o foi possivel realizar esse operaÃ§Ã£o']);
+            $error = $this->addCacheLog($e->getMessage());
+            echo $this->render("{$this->getNameModel()}.create", ['error' => 'Não foi possível realizar esta operação,','code' => $error ]);
         }
     }
 
     public function addCacheLog($msg)
     {
-        Cache::set('log',[ date('d-m-Y_h:m:s') => $msg]);
+        Cache::set('log_app',[ date('d-m-Y_h:m:s') => $msg]);
+        $end = objectToArray(Cache::get('log_app'));
+        return key(end($end));
     }
 }
