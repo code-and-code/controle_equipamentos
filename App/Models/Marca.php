@@ -7,4 +7,8 @@ class Marca extends Model {
 
     protected $table      = "marcas";
 
+    public function Equipamentos()
+    {
+        return $this->hasMany(Equipamento::class);
+    }
 }

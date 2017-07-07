@@ -1,5 +1,7 @@
 <?php
-namespace App\Controllers;
+namespace App\Controllers\Auth;
+
+use App\Models\Marca;
 
 class AuthController extends \Cac\Auth\Auth
 {

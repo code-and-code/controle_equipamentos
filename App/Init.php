@@ -11,9 +11,7 @@ class Init extends Bootstrap
         $ar['home.index']    = ['route' => '/',         'controller' =>  'HomeController', 'method'=>'GET', 'action' => 'index'];
         $ar['home.contact']  = ['route' => '/contact',   'controller' => 'HomeController', 'method'=>'GET', 'action' => 'contact'];
 
-        $ar['auth.index']     = ['route' => '/auth',          'controller' => 'AuthController', 'method'=>'GET',  'action' => 'getLogin'   ];
-        $ar['auth.login']     = ['route' => '/auth/login',    'controller' => 'AuthController', 'method'=>'POST', 'action' => 'postLogin'  ];
-        $ar['auth.logout']    = ['route' => '/auth/logout',   'controller' => 'AuthController', 'method'=>'GET',  'action' => 'logout'     ];
+        require 'routes/login.php';
 
         $ar['register']       = ['route' => '/register',      'controller' => 'AuthController', 'method'=>'GET', 'action' => 'getRegister' ];
         $ar['register.store'] = ['route' => '/register/store','controller' => 'AuthController', 'method'=>'POST','action' => 'postRegister'];

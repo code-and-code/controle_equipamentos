@@ -7,4 +7,8 @@ class Licenca extends Model {
 
     protected $table      = "licencas";
 
+    public function Computador()
+    {
+        return $this->belongsTo(Computador::class);
+    }
 }

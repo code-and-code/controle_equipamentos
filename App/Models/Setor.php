@@ -7,4 +7,9 @@ class Setor extends Model {
 
     protected $table      = "setores";
 
+   public function Funcionarios()
+   {
+       return $this->hasMany(Funcionario::class);
+   }
+
 }

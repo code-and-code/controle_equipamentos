@@ -1,10 +1,12 @@
 <?php
 namespace App\Models;
 
+use App\Support\PatrimonioTrait;
 use Cac\Model\Model;
 
 class Monitor extends Model {
 
-    protected $table      = "monitores";
+    use PatrimonioTrait;
 
+    protected $table      = "monitores";
 }

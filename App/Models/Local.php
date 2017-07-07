@@ -7,4 +7,9 @@ class Local extends Model {
 
     protected $table      = "locais";
 
+    public function Patrimonios()
+    {
+        return $this->hasMany(Patrimonio::class);
+    }
+
 }

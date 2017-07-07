@@ -6,7 +6,7 @@ return [
     'timezone' => 'UTC',
 
     'database' => [ 'host'     => '127.0.0.1',
-        'dbname'   => 'equipamentos',
+        'dbname'   => 'equipamento',
         'username' => 'root',
         'password' =>  '123456'
     ],
@@ -15,8 +15,8 @@ return [
 
         'folder'     => '../App/views/',
         'tag'       => ['{','}'],
-        'extension' => '.html.twig',
-        'cache'     => '../../../storage/compilation_cache'
+        'extension' => '.code.twig',
+        'cache'     => '../storage/compilation_cache'
     ],
 
     'file'  => [
@@ -24,7 +24,7 @@ return [
     ],
 
     'cache'  => [ 'active' => true,
-        'folder' => '../../../storage/cache',
+        'folder' => '../storage/cache',
     ]
 ];
 
