@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
@@ -59,7 +60,7 @@
                 <div class="col-md-12">
                     <ul class="nav nav-justified nav-pills">
                         <li class="active">
-                            <a href="/index.html">Funcionarios</a>
+                            <a href="/funcionario">Funcionarios</a>
                         </li>
                         <li >
                             <a href="index.html">Periféricos</a>
@@ -82,7 +83,31 @@
     {% endif %}
 
     <div class="section">
+
+
         <div class="container">
+            {% if success %}
+                <div class="alert alert-success">
+                    SUCESSO! {{ success }}
+                </div>
+            {% endif %}
+            {% if error %}
+                <div class="alert alert-danger">
+                    Erro! {{ error }}
+                </div>
+            {% endif %}
+
+            {% if info %}
+                <div class="alert alert-info">
+                    Ops! {{ info }}
+                </div>
+            {% endif %}
+
+            {% if warning %}
+                <div class="alert alert-warning">
+                    Humm! {{ warning }}
+                </div>
+            {% endif %}
             {% block content %}{% endblock %}
         </div>
     </div>
@@ -111,5 +136,11 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="../../assets/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".js-example-basic-single").select2();
+    });
+</script>
 </body>
 </html>

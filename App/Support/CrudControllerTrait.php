@@ -36,7 +36,7 @@ trait CrudControllerTrait
         }catch (\Exception $e)
         {
             $this->addCacheLog($e->getMessage());
-            echo $this->render("{$this->getNameModel()}.create", ['error' => 'Não foi possivel realizar esse operação']);
+            echo $this->render("{$this->getNameModel()}.create", ['error' => 'Não foi possível realizar esta operação']);
         }
     }
 
@@ -49,7 +49,7 @@ trait CrudControllerTrait
         }catch (\Exception $e)
         {
             $this->addCacheLog($e->getMessage());
-            echo $this->render("{$this->getNameModel()}.create", ['error' => 'Não foi possivel realizar esse operação']);
+            echo $this->render("{$this->getNameModel()}.create", ['error' => 'NÃ£o foi possivel realizar esse operaÃ§Ã£o']);
         }
     }
 
@@ -64,7 +64,7 @@ trait CrudControllerTrait
         }catch (\Exception $e)
         {
             $this->addCacheLog($e->getMessage());
-            echo $this->render("{$this->getNameModel()}.edit", ['error' => 'Não foi possivel realizar esse operação']);
+            echo $this->render("{$this->getNameModel()}.edit", ['error' => 'NÃ£o foi possivel realizar esse operaÃ§Ã£o']);
         }
     }
 
@@ -78,7 +78,7 @@ trait CrudControllerTrait
         }catch (\Exception $e)
         {
             $this->addCacheLog($e->getMessage());
-            echo $this->render("{$this->getNameModel()}.index", ['error' => 'Não foi possivel realizar esse operação']);
+            echo $this->render("{$this->getNameModel()}.index", ['error' => 'NÃ£o foi possivel realizar esse operaÃ§Ã£o']);
         }
     }
 
