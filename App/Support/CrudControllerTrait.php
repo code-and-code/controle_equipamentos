@@ -2,6 +2,8 @@
 
 namespace App\Support;
 
+use Cac\Support\Cache;
+
 trait CrudControllerTrait
 {
     public function getNameModel()
@@ -17,7 +19,7 @@ trait CrudControllerTrait
 
     public function index()
     {
-        echo $this->render("{$this->getNameModel()}.index", []);
+        echo $this->render("{$this->getNameModel()}.index", [[$this->getNameModel() => $this->getModelClass()->all()]]);
     }
 
     public function create()
@@ -29,18 +31,26 @@ trait CrudControllerTrait
     {
         try{
             $this->getModelClass()->create($_POST);
-            return 'Gravado';
+            echo $this->render("{$this->getNameModel()}.create", ['success' => 'Gravado']);
 
         }catch (\Exception $e)
         {
-            return $e->getMessage();
+            $this->addCacheLog($e->getMessage());
+            echo $this->render("{$this->getNameModel()}.create", ['error' => 'Não foi possivel realizar esse operação']);
         }
     }
 
     public function edit()
     {
-        $r = $this->getModelClass()->find($_GET['id']);
-        echo $this->render("{$this->getNameModel()}.edit", [$this->getNameModel() => $r]);
+        try{
+            $r = $this->getModelClass()->find($_GET['id']);
+            echo $this->render("{$this->getNameModel()}.edit", [$this->getNameModel() => $r]);
+
+        }catch (\Exception $e)
+        {
+            $this->addCacheLog($e->getMessage());
+            echo $this->render("{$this->getNameModel()}.create", ['error' => 'Não foi possivel realizar esse operação']);
+        }
     }
 
     public function update()
@@ -49,11 +59,12 @@ trait CrudControllerTrait
 
             $r = $this->getModelClass()->find($_GET['id']);
             $r->update($_POST);
-            return 'Alterado';
+            echo $this->render("{$this->getNameModel()}.edit", ['success' => 'Alterado']);
 
         }catch (\Exception $e)
         {
-            return $e->getMessage();
+            $this->addCacheLog($e->getMessage());
+            echo $this->render("{$this->getNameModel()}.edit", ['error' => 'Não foi possivel realizar esse operação']);
         }
     }
 
@@ -62,11 +73,17 @@ trait CrudControllerTrait
         try{
             $r = $this->getModelClass()->find($_GET['id']);
             $r->delete();
-            return 'Excludio';
+            echo $this->render("{$this->getNameModel()}.index", ['success' => 'Excluido']);
 
         }catch (\Exception $e)
         {
-            return $e->getMessage();
+            $this->addCacheLog($e->getMessage());
+            echo $this->render("{$this->getNameModel()}.index", ['error' => 'Não foi possivel realizar esse operação']);
         }
+    }
+
+    public function addCacheLog($msg)
+    {
+        Cache::set('log',[ date('d-m-Y_h:m:s') => $msg]);
     }
 }
