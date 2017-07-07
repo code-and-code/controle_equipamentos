@@ -9,9 +9,9 @@ class Init extends Bootstrap
     protected function initRoutes()
     {
         $ar['home.index']    = ['route' => '/',         'controller' =>  'HomeController', 'method'=>'GET', 'action' => 'index'];
-        $ar['home.contact']  = ['route' => '/contact',   'controller' => 'HomeController', 'method'=>'GET', 'action' => 'contact'];
 
         require 'routes/login.php';
+        require 'routes/funcionario.php';
 
         $ar['register']       = ['route' => '/register',      'controller' => 'AuthController', 'method'=>'GET', 'action' => 'getRegister' ];
         $ar['register.store'] = ['route' => '/register/store','controller' => 'AuthController', 'method'=>'POST','action' => 'postRegister'];

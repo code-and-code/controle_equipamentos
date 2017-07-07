@@ -1,11 +1,11 @@
 <?php
 namespace App\Controllers;
 
-use App\Models\Local;
+use App\Models\Funcionario;
 use App\Support\CrudControllerTrait;
 use Cac\Controller\Action;
 
-class LocalController extends Action
+class FuncionarioController extends Action
 {
     public $model;
 
@@ -13,6 +13,6 @@ class LocalController extends Action
 
     public function __construct()
     {
-        $this->model = new Local();
+        $this->model = new Funcionario();
     }
 }
