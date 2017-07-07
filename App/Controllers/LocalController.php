@@ -4,7 +4,7 @@ namespace App\Controllers;
 use App\Models\Local;
 use Cac\Controller\Action;
 
-class MarcaController extends Action
+class LocalController extends Action
 {
     private $local;
 
