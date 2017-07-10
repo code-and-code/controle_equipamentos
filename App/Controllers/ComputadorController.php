@@ -1,12 +1,12 @@
 <?php
 namespace App\Controllers;
 
+use App\Models\Computador;
 use App\Models\Equipamento;
-use App\Models\Periferico;
 use App\Support\CrudControllerTrait;
 use Cac\Controller\Action;
 
-class PerifericoController extends Action
+class ComputadorController extends Action
 {
     public $model;
 
@@ -14,12 +14,12 @@ class PerifericoController extends Action
 
     public function __construct()
     {
-        $this->model = new Periferico();
+        $this->model = new Computador();
     }
 
     public function create()
     {
         $equipamento = new Equipamento();
-        echo $this->render('periferico.create', ['equipamentos' => $equipamento->All()]);
+        echo $this->render('computador.create', ['equipamentos' => $equipamento->All()]);
     }
 }

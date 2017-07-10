@@ -4,7 +4,6 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "061dee60e9d2b988dead7ac4c3baaf20",
     "content-hash": "5665e2381c23a1bd18df9c0fc66dc934",
     "packages": [
         {
@@ -93,7 +92,7 @@
                 "upload",
                 "validation"
             ],
-            "time": "2013-07-07 17:01:41"
+            "time": "2013-07-07T17:01:41+00:00"
         },
         {
             "name": "desarrolla2/cache",
@@ -148,7 +147,7 @@
                 "mysql",
                 "redis"
             ],
-            "time": "2017-01-18 12:58:33"
+            "time": "2017-01-18T12:58:33+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -224,7 +223,7 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2017-03-15 19:32:56"
+            "time": "2017-03-15T19:32:56+00:00"
         },
         {
             "name": "plasticbrain/php-flash-messages",
@@ -266,7 +265,7 @@
                 "messages",
                 "session"
             ],
-            "time": "2016-04-01 08:39:38"
+            "time": "2016-04-01T08:39:38+00:00"
         },
         {
             "name": "twig/twig",
@@ -528,7 +527,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2016-09-30 07:12:33"
+            "time": "2016-09-30T07:12:33+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -575,7 +574,7 @@
                     "email": "me@mikevanriel.com"
                 }
             ],
-            "time": "2016-11-25 06:54:22"
+            "time": "2016-11-25T06:54:22+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -789,7 +788,7 @@
             "keywords": [
                 "template"
             ],
-            "time": "2015-06-21 13:50:34"
+            "time": "2015-06-21T13:50:34+00:00"
         },
         {
             "name": "phpunit/php-timer",

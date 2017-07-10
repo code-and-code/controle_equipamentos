@@ -1,0 +1,85 @@
+{% extends view('app') %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Computador | Criar</h3>
+                </div>
+                <div class="panel-body">
+                    <form role="form" action="/computador/gravar" method="post">
+                        <div class="form-group">
+                            <label class="control-label" for="1">
+                                Equipamento
+                            </label>
+                            <select class="js-example-basic-single form-control" name="equipamento_id" id="1">
+                                {% for equipamento in equipamentos %}
+                                    <option value="{{  equipamento.id }}"> {{ equipamento.nome }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <label class="control-label" for="4">
+                                    Placa Mãe
+                                </label>
+                                <input class="form-control" id="4" placeholder="" name="placa_mae" type="text">
+                            </div>
+                            <div class="col-xs-3">
+                                <label class="control-label" for="4">
+                                    Memória
+                                </label>
+                                <input class="form-control" id="3" placeholder="" name="memoria" type="text">
+                            </div>
+                            <div class="col-xs-4">
+                                <label class="control-label" for="4">
+                                    Processador
+                                </label>
+                                <input class="form-control" id="6" placeholder="" name="processador" type="text">
+                            </div>
+                            <div class="col-xs-2">
+                                <label class="control-label" for="4">
+                                    HD
+                                </label>
+                                <input class="form-control" id="5" placeholder="" name="hd" type="text">
+                            </div>
+                        </div>
+                        </br>
+                        <div class="form-group">
+                            <label class="control-label" for="7">
+                                Placa De Vídeo
+                            </label>
+                            <input class="form-control" id="7" placeholder="" name="placa_video" type="text">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="9">
+                                NFe
+                            </label>
+                            <input class="form-control" id="9" placeholder="" name="nfe" type="text">
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <label class="control-label" for="4">
+                                    Data Compra
+                                </label>
+                                <input class="form-control" id="11" placeholder="" name="data_compra" type="date">
+                            </div>
+                            <div class="col-xs-6">
+                                <label class="control-label" for="4">
+                                    Valor
+                                </label>
+                                <input class="form-control" id="10" placeholder="" name="valor" type="text">
+                            </div>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary">
+                            Cadastrar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

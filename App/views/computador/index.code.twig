@@ -1,0 +1,57 @@
+{% extends view('app') %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Computador <a href="/computador/novo" class="fa fa-plus pull-right"></a></h3>
+
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Equipamento</th>
+                                <th>Modelo</th>
+                                <th>Marca</th>
+                                <th>Memoria</th>
+                                <th>Placa</th>
+                                <th>Hd</th>
+                                <th>Processador</th>
+                                <th>Placa De Vídeo</th>
+                                <th>NFe</th>
+                                <th>Data Compra</th>
+                                <th>Valor</th>
+                                <th>#</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for computador in results %}
+                                <tr>
+                                    <td>{{ computador.id }}</td>
+                                    <td>{{ computador.Equipamento().nome }}</td>
+                                    <td>{{ computador.Equipamento().modelo }}</td>
+                                    <td>{{ computador.Equipamento().Marca().nome }}</td>
+                                    <td>{{ computador.memoria }}</td>
+                                    <td>{{ computador.placa }}</td>
+                                    <td>{{ computador.hd }}</td>
+                                    <td>{{ computador.processador }}</td>
+                                    <td>{{ computador.placa_video }}</td>
+                                    <td>{{ computador.nfe }}</td>
+                                    <td>{{ computador.data_compra }}</td>
+                                    <td>{{ computador.valor }}</td>
+                                    <td>
+                                        <a href="/computador/editar?id={{ computador.id }}" class="fa fa-edit text-info"></a>
+                                        <a href="/computador/deletar?id={{ computador.id }}" class="fa fa-trash text-danger"></a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
