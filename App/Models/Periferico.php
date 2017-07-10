@@ -9,5 +9,6 @@ class Periferico extends Model {
     use PatrimonioTrait;
 
     protected $table      = "Perifericos";
+    public    $requested    = ['equipamento_id', 'descricao', 'nfe', 'valor', 'data_compra'];
 
 }

@@ -11,6 +11,8 @@ class Computador extends Model {
 
     protected $table      = "computadores";
 
+    public    $requested    = ['equipamento_id','memoria', 'placa', 'hd', 'processador', 'placa_video', 'nfe', 'data_compra'];
+
     public function Licencas()
     {
         return $this->hasMany(Licenca::class);

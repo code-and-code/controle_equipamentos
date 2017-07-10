@@ -5,7 +5,7 @@
         <div class="col-md-12">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Monitores <a href="create.code.twig" class="fa fa-plus pull-right"></a></h3>
+                    <h3 class="panel-title">Monitores <a href="/monitor/novo" class="fa fa-plus pull-right"></a></h3>
 
                 </div>
                 <div class="panel-body">
@@ -24,21 +24,22 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>xxxx</td>
-                                <td>xxxx</td>
-                                <td>xxxx</td>
-                                <td>xxxx</td>
-                                <td>xxxx</td>
-                                <td>xxxx</td>
-                                <td>xxxx</td>
-
-                                <td>
-                                    <a href="edit.code.twig" class="fa fa-edit text-info"></a>
-                                    <a href="edit.code.twig" class="fa fa-trash text-danger"></a>
-                                </td>
-                            </tr>
+                            {% for monitor in results %}
+                                <tr>
+                                    <td>{{ monitor.id }}</td>
+                                    <td>{{ monitor.Equipamento().nome }}</td>
+                                    <td>{{ monitor.Equipamento().modelo }}</td>
+                                    <td>{{ monitor.Equipamento().Marca().nome  }}</td>
+                                    <td>{{ monitor.tela }}</td>
+                                    <td>{{ monitor.nfe }}</td>
+                                    <td>{{ monitor.data_compra }}</td>
+                                    <td>{{ monitor.valor }}</td>
+                                    <td>
+                                        <a href="/monitor/editar?id={{ monitor.id }}" class="fa fa-edit text-info"></a>
+                                        <a href="/monitor/deletar?id={{ monitor.id }}" class="fa fa-trash text-danger"></a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>
