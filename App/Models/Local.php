@@ -6,6 +6,7 @@ use Cac\Model\Model;
 class Local extends Model {
 
     protected $table      = "locais";
+    public    $requested  = ['nome'];
 
     public function Patrimonios()
     {

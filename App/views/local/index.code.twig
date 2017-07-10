@@ -1,0 +1,38 @@
+{% extends view('app') %}
+
+{% block content %}
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Locais <a href="/local/novo" class="fa fa-plus pull-right"></a></h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>#</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for  local in results %}
+                                <tr>
+                                    <td>{{ local.id }}</td>
+                                    <td>{{ local.nome }}</td>
+                                    <td>
+                                        <a href="local/editar?id={{ local.id }}"  class="fa fa-edit text-info"    ></a>
+                                        <a href="local/deletar?id={{ local.id }}" class="fa fa-trash text-danger" ></a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
