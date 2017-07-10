@@ -59,7 +59,7 @@ trait CrudControllerTrait
         try{
 
             Validation::requireModel($this->getModelClass(),$_POST);
-            $r = $this->getModelClass()->find($_GET['id']);
+            $r = $this->getModelClass()->find($_POST['id']);
             $r->update($_POST);
             back('Alterado');
 

@@ -10,7 +10,7 @@ class Funcionario extends Model {
 
     public function Setor()
     {
-        return $this->belongsTo(Setor::class);
+        return $this->hasOne(Setor::class);
     }
 
     public function Patrimonios()
