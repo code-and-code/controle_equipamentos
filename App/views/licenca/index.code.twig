@@ -1,0 +1,40 @@
+{% extends view('app') %}
+
+{% block content %}
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Licenças <a href="/licenca/novo" class="fa fa-plus pull-right"></a></h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Serial</th>
+                                <th>#</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for  licenca in results %}
+                                <tr>
+                                    <td>{{ licenca.id }}</td>
+                                    <td>{{ licenca.nome }}</td>
+                                    <td><a href="/licenca/serial/por_licenca?id={{ licenca.id}}" >{{ licenca.Serial | length }}</a></td>
+                                    <td>
+                                        <a href="licenca/editar?id={{ licenca.id }}"  class="fa fa-edit text-info"    ></a>
+                                        <a href="licenca/deletar?id={{ licenca.id }}" class="fa fa-trash text-danger" ></a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

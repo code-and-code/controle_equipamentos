@@ -6,9 +6,10 @@ use Cac\Model\Model;
 class Licenca extends Model {
 
     protected $table      = "licencas";
+    public    $requested  = ['nome'];
 
-    public function Computador()
+    public function Serial()
     {
-        return $this->belongsTo(Computador::class);
+        return $this->hasMany(Serial::class);
     }
 }

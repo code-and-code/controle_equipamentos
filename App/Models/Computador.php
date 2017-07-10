@@ -9,7 +9,7 @@ class Computador extends Model {
 
     use PatrimonioTrait;
 
-    protected $table      = "computador";
+    protected $table      = "computadores";
 
     public function Licencas()
     {
