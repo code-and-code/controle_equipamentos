@@ -22,4 +22,10 @@ class FuncionarioController extends Action
         $setor = new Setor();
         echo $this->render('funcionario.create', ['setores' => $setor->All()]);
     }
+
+    public function findBySetor()
+    {
+        $funcionarios = $this->model->where('setor_id', '=' ,$_GET['id'])->get();
+        echo $this->render('funcionario.index', ['results' =>$funcionarios]);
+    }
 }

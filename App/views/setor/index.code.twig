@@ -1,0 +1,38 @@
+{% extends view('app') %}
+
+{% block content %}
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Setores <a href="/setor/novo" class="fa fa-plus pull-right"></a></h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>#</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for  setor in results %}
+                                <tr>
+                                    <td>{{ setor.id }}</td>
+                                    <td>{{ setor.nome }}</td>
+                                    <td>
+                                        <a href="setor/editar?id={{ setor.id }}"  class="fa fa-edit text-info"    ></a>
+                                        <a href="setor/deletar?id={{ setor.id }}" class="fa fa-trash text-danger" ></a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

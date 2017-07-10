@@ -12,6 +12,9 @@ class Init extends Bootstrap
 
         require 'routes/login.php';
         require 'routes/log.php';
+
+        require 'routes/setor.php';
+
         require 'routes/funcionario.php';
         require 'routes/periferico.php';
 
