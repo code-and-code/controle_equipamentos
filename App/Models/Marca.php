@@ -6,6 +6,7 @@ use Cac\Model\Model;
 class Marca extends Model {
 
     protected $table      = "marcas";
+    public    $requested  = ['nome'];
 
     public function Equipamentos()
     {
