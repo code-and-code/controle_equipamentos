@@ -28,7 +28,7 @@ return [
     ],
 
     'log'  => [ 'file' => 'main.log',
-    'folder' => '../storage/log',
-]
+               'folder' => '../storage/log',
+    ]
 ];
 

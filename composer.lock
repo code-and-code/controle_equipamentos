@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5b2ff2b015eccf58622d0770e6a263ef",
-    "content-hash": "5dc7ea11d5d862ba46bde1a356902937",
+    "hash": "3ec4f2af2b683102a4c4f1c673bc353e",
+    "content-hash": "5f1e351650c2dd1e8ec6a01974b632a9",
     "packages": [
         {
             "name": "codeandcode/micro-fwk",
-            "version": "1.5",
+            "version": "1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/code-and-code/micro-fwk.git",
-                "reference": "e24a982f7810c55ebae80e9f30ec99f8f4427f01"
+                "reference": "a905939c0175aa007a2501fd6b35a0f05248714c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/code-and-code/micro-fwk/zipball/e24a982f7810c55ebae80e9f30ec99f8f4427f01",
-                "reference": "e24a982f7810c55ebae80e9f30ec99f8f4427f01",
+                "url": "https://api.github.com/repos/code-and-code/micro-fwk/zipball/a905939c0175aa007a2501fd6b35a0f05248714c",
+                "reference": "a905939c0175aa007a2501fd6b35a0f05248714c",
                 "shasum": ""
             },
             "require": {
@@ -26,6 +26,7 @@
                 "desarrolla2/cache": "~2.0",
                 "php": ">=5.3",
                 "phpmailer/phpmailer": "^5.2",
+                "plasticbrain/php-flash-messages": "^1.0",
                 "twig/twig": "~1.0"
             },
             "type": "project",
@@ -45,7 +46,7 @@
                 "projecto inical",
                 "start"
             ],
-            "time": "2017-07-07 18:12:36"
+            "time": "2017-07-10 13:02:12"
         },
         {
             "name": "codeguy/upload",
