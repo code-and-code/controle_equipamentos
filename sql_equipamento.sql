@@ -132,12 +132,29 @@ DROP TABLE IF EXISTS `licencas`;
 CREATE TABLE `licencas` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) NOT NULL,
-  `serial` varchar(255) NOT NULL,
-  `computator_id` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
-  `computador_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+# Dump of table serial
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `serial`;
+
+CREATE TABLE `serial` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `numero`  varchar(255) NOT NULL,
+  `data_vencimento` datetime DEFAULT NULL,
+  `computator_id` int(11) DEFAULT NULL,
+  `licenca_id` int(11) unsigned NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `serial_licenca_id_foreign` (`licenca_id`),
+  CONSTRAINT `serial_licenca_id_foreign` FOREIGN KEY (`licenca_id`) REFERENCES `licencas` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
@@ -186,7 +203,6 @@ CREATE TABLE `patrimonios` (
   `funcionario_id` int(11) unsigned NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
-  `computador_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `patrimonio_categoria_id_foreign` (`categoria_id`),
   KEY `patrimonio_local_id_foreign` (`local_id`),

@@ -1,0 +1,63 @@
+{% extends view('app') %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Equipamento | Editar </h3>
+                </div>
+                <div class="panel-body">
+                    <form role="form" action="/equipamento/atualizar" method="post">
+
+                        <input type="hidden" name="id" value="{{ equipamento.id }}">
+
+                        <div class="form-group">
+                            <label class="control-label" for="2">
+                                Nome
+                            </label>
+                            <input class="form-control" id="2" placeholder="" name="nome" type="text" value="{{ equipamento.nome }}">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="2">
+                                Modelo
+                            </label>
+                            <input class="form-control" id="2" placeholder="" name="modelo" type="text" value="{{ equipamento.modelo }}">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="1">
+                                Marca
+                            </label>
+                            <select class="js-example-basic-single form-control" name="marca_id" id="1">
+
+                                <option value="{{ equipamento.Marca.id }}">{{ equipamento.Marca.nome }}</option>
+
+                                {% for marca in marcas %}
+                                    <option value="{{  marca.id }}"> {{ marca.nome }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="1">
+                                Categoria
+                            </label>
+                            <select class="js-example-basic-single form-control" name="categoria_id" id="1">
+
+                                <option value="{{ equipamento.Categoria.id }}">{{ equipamento.Categoria.nome }}</option>
+
+                                {% for categoria in categorias %}
+                                    <option value="{{  categoria.id }}"> {{ categoria.nome }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            Gravar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
