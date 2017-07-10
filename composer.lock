@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3ec4f2af2b683102a4c4f1c673bc353e",
-    "content-hash": "5f1e351650c2dd1e8ec6a01974b632a9",
+    "hash": "d6de52793ee09b256f213eaf1659c139",
+    "content-hash": "7826647666b4701571e0ef609aec9fa4",
     "packages": [
         {
             "name": "codeandcode/micro-fwk",
-            "version": "1.6",
+            "version": "1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/code-and-code/micro-fwk.git",
-                "reference": "a905939c0175aa007a2501fd6b35a0f05248714c"
+                "reference": "fa7a49b3b417831b28c4dc8c75f9eab394a01007"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/code-and-code/micro-fwk/zipball/a905939c0175aa007a2501fd6b35a0f05248714c",
-                "reference": "a905939c0175aa007a2501fd6b35a0f05248714c",
+                "url": "https://api.github.com/repos/code-and-code/micro-fwk/zipball/fa7a49b3b417831b28c4dc8c75f9eab394a01007",
+                "reference": "fa7a49b3b417831b28c4dc8c75f9eab394a01007",
                 "shasum": ""
             },
             "require": {
@@ -46,7 +46,7 @@
                 "projecto inical",
                 "start"
             ],
-            "time": "2017-07-10 13:02:12"
+            "time": "2017-07-10 13:39:45"
         },
         {
             "name": "codeguy/upload",

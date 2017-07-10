@@ -5,7 +5,8 @@ use Cac\Model\Model;
 
 class Funcionario extends Model {
 
-    protected $table      = "funcionarios";
+    protected $table        = "funcionarios";
+    public    $requested    = ['setor_id','nome','email'];
 
     public function Setor()
     {

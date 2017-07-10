@@ -2,6 +2,8 @@
 
 namespace App\Support;
 
+use Cac\Exception\ModelException;
+use Cac\Support\Validation;
 
 trait CrudControllerTrait
 {
@@ -29,12 +31,14 @@ trait CrudControllerTrait
     public function store()
     {
         try{
+
+            Validation::requireModel($this->getModelClass(),$_POST);
             $this->getModelClass()->create($_POST);
             back('Gravado');
 
         }catch (\Exception $e)
         {
-            $this->fail($e->getMessage());
+            $this->fail($e);
         }
     }
 
@@ -46,7 +50,7 @@ trait CrudControllerTrait
 
         }catch (\Exception $e)
         {
-            $this->fail($e->getMessage());
+            $this->fail($e);
         }
     }
 
@@ -54,13 +58,14 @@ trait CrudControllerTrait
     {
         try{
 
+            Validation::requireModel($this->getModelClass(),$_POST);
             $r = $this->getModelClass()->find($_GET['id']);
             $r->update($_POST);
             back('Alterado');
 
         }catch (\Exception $e)
         {
-            $this->fail($e->getMessage());
+            $this->fail($e);
         }
     }
 
@@ -73,13 +78,16 @@ trait CrudControllerTrait
 
         }catch (\Exception $e)
         {
-            $this->fail($e->getMessage());
+            $this->fail($e);
         }
     }
 
-    public function fail($error)
+    public function fail($e)
     {
-        alert('error','Não foi possível realizar esta operação');
-        back($error,'info');
+        if ($e instanceof ModelException) {
+
+            alert('error','Não foi possível realizar esta operação BANCO DE DADOS');
+        }
+        back($e->getMessage(),'warning');
     }
 }
