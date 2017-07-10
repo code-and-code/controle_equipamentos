@@ -253,7 +253,6 @@ CREATE TABLE `computadores` (
 
 DROP TABLE IF EXISTS `monitores`;
 
-
 CREATE TABLE `monitores` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `tela` varchar(255) DEFAULT NULL,
