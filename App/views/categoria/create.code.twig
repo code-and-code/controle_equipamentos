@@ -1,0 +1,28 @@
+{% extends view('app') %}
+
+{% block content %}
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Categoria | Criar</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" action="/categoria/gravar" method="post">
+                            <div class="form-group">
+                                <label class="control-label" for="2">
+                                    Nome
+                                </label>
+                                <input class="form-control" id="2" placeholder="" name="nome" type="text">
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                Gravar
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{%  endblock %}

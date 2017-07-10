@@ -6,5 +6,5 @@ use Cac\Model\Model;
 class Categoria extends Model {
 
     protected $table      = "categorias";
-
+    public    $requested  = ['nome'];
 }
