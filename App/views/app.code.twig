@@ -27,11 +27,23 @@
             <a class="navbar-brand" href="#"><span>Logo</span></a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
+
+            {% if guest() == true %}
+
+                <li><a href="#">Lincenças</a></li>
+                <li><a href="#">Setor</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Local</a></li>
+                <li><a href="#">Marca</a></li>
+
+            {% endif %}
+
+            <li class="">
                 <div class="dropdown navbar-brand">
                     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
                         <span class="fa fa-fw fa-navicon"></span>
                     </button>
+
                     <ul class="dropdown-menu">
                         {% if guest() == true %}
 
