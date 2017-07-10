@@ -1,0 +1,45 @@
+{% extends view('app') %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Patrimônios | Editar</h3>
+                </div>
+                <div class="panel-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label class="control-label" for="1">
+                                Número Patrimonial
+                            </label>
+                            <input class="form-control" id="1" name="num_patrimonial" placeholder="" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="2">
+                                Número Serial
+                            </label>
+                            <input class="form-control" id="2" placeholder="" name="serial" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="3">
+                                Funcionario
+                            </label>
+                            <input class="form-control" id="3" placeholder="" name="Funcionario" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="4">
+                                Local
+                            </label>
+                            <input class="form-control" id="4" placeholder="" name="local" type="text">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            Cadastrar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
