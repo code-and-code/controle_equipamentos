@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "97511fb858d3c489a0e5ec36f67ba5c3",
-    "content-hash": "062abf7f864d038e100e076492f6606b",
+    "hash": "5b2ff2b015eccf58622d0770e6a263ef",
+    "content-hash": "5dc7ea11d5d862ba46bde1a356902937",
     "packages": [
         {
             "name": "codeandcode/micro-fwk",
@@ -224,6 +224,48 @@
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
             "time": "2017-03-15 19:32:56"
+        },
+        {
+            "name": "plasticbrain/php-flash-messages",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/plasticbrain/PhpFlashMessages.git",
+                "reference": "b565762619342057ce561de20d0f2f6e14f9aa77"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/plasticbrain/PhpFlashMessages/zipball/b565762619342057ce561de20d0f2f6e14f9aa77",
+                "reference": "b565762619342057ce561de20d0f2f6e14f9aa77",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Plasticbrain\\FlashMessages\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Everhart",
+                    "email": "mike@plasticbrain.net"
+                }
+            ],
+            "description": "A modern take on PHP session-based flash messages",
+            "keywords": [
+                "bootstrap",
+                "flash",
+                "messages",
+                "session"
+            ],
+            "time": "2016-04-01 08:39:38"
         },
         {
             "name": "twig/twig",

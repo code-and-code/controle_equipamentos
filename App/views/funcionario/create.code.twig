@@ -39,6 +39,7 @@
                                     Setor
                                 </label>
                                 <select class="js-example-basic-single form-control" name="setor_id" id="1">
+                                    <option value="">Selecione</option>
                                     {% for setor in setores %}
                                         <option value="{{  setor.id }}"> {{ setor.nome }}</option>
                                     {% endfor %}

@@ -84,8 +84,16 @@
 
     <div class="section">
 
-
         <div class="container">
+
+            {% if hasErrors() == true %}
+                {{ display() }}
+            {% endif %}
+
+            {% if hasMessages() == true %}
+                {{ display() }}
+            {% endif %}
+
             {% if success %}
                 <div class="alert alert-success">
                     SUCESSO! {{ success }}

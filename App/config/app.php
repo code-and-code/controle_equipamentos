@@ -25,6 +25,10 @@ return [
 
     'cache'  => [ 'active' => true,
         'folder' => '../storage/cache',
-    ]
+    ],
+
+    'log'  => [ 'file' => 'main.log',
+    'folder' => '../storage/log',
+]
 ];
 

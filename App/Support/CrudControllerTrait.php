@@ -2,7 +2,6 @@
 
 namespace App\Support;
 
-use Cac\Support\Cache;
 
 trait CrudControllerTrait
 {
@@ -31,12 +30,11 @@ trait CrudControllerTrait
     {
         try{
             $this->getModelClass()->create($_POST);
-            echo $this->render("{$this->getNameModel()}.create", ['success' => 'Gravado']);
+            back('Gravado');
 
         }catch (\Exception $e)
         {
-            $error = $this->addCacheLog($e->getMessage());
-            echo $this->render("{$this->getNameModel()}.create", ['error' => 'Não foi possível realizar esta operação,','code' => $error ]);
+            $this->fail($e->getMessage());
         }
     }
 
@@ -48,8 +46,7 @@ trait CrudControllerTrait
 
         }catch (\Exception $e)
         {
-            $error = $this->addCacheLog($e->getMessage());
-            echo $this->render("{$this->getNameModel()}.create", ['error' => 'Não foi possível realizar esta operação,','code' => $error ]);
+            $this->fail($e->getMessage());
         }
     }
 
@@ -59,12 +56,11 @@ trait CrudControllerTrait
 
             $r = $this->getModelClass()->find($_GET['id']);
             $r->update($_POST);
-            echo $this->render("{$this->getNameModel()}.edit", ['success' => 'Alterado']);
+            back('Alterado');
 
         }catch (\Exception $e)
         {
-            $error = $this->addCacheLog($e->getMessage());
-            echo $this->render("{$this->getNameModel()}.create", ['error' => 'Não foi possível realizar esta operação,','code' => $error ]);
+            $this->fail($e->getMessage());
         }
     }
 
@@ -73,19 +69,17 @@ trait CrudControllerTrait
         try{
             $r = $this->getModelClass()->find($_GET['id']);
             $r->delete();
-            echo $this->render("{$this->getNameModel()}.index", ['success' => 'Excluido']);
+            back('Excluido');
 
         }catch (\Exception $e)
         {
-            $error = $this->addCacheLog($e->getMessage());
-            echo $this->render("{$this->getNameModel()}.create", ['error' => 'Não foi possível realizar esta operação,','code' => $error ]);
+            $this->fail($e->getMessage());
         }
     }
 
-    public function addCacheLog($msg)
+    public function fail($error)
     {
-        Cache::set('log_app',[ date('d-m-Y_h:m:s') => $msg]);
-        $end = objectToArray(Cache::get('log_app'));
-        return key(end($end));
+        alert('error','Não foi possível realizar esta operação');
+        back($error,'info');
     }
 }
