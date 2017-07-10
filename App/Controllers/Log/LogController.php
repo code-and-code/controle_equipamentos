@@ -2,20 +2,20 @@
 namespace App\Controllers\Log;
 
 use Cac\Controller\Action;
-use Cac\Support\Cache;
+use Cac\Support\Log;
 
 class LogController extends Action
 {
-    public function error()
+    public function index()
     {
-        $code = $_GET['code'];
-        $logs = Cache::get('log_app');
+        $log = Log::getFile();
+        $ponteiro = fopen($log, "r");
 
-        foreach($logs as $log)
-        {
-            $codes[] =(objectToArray($log));
+        while (!feof($ponteiro)) {
+
+            $linha = fgets($ponteiro, 4096);
+            echo $linha . "<br>";
         }
-
-        echo print_r($codes[][]);
+        fclose($ponteiro);
     }
 }
