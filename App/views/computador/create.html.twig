@@ -48,16 +48,16 @@
                                 <a href="../funcionarios/index.html.twig">Funcionarios</a>
                             </li>
                             <li>
-                                <a href="../perifericos//index.html">Periféricos</a>
-                            </li>
-                            <li>
-                                <a href="../computadores/index.html">Computadores</a>
+                                <a href="../periferico//index.html">Periféricos</a>
                             </li>
                             <li class="active">
-                                <a href="../monitores/index.html"> Monitores </a>
+                                <a href="/index.html">Computadores</a>
                             </li>
                             <li>
-                                <a href="../patrimonios/índex.html"> Patrimônios </a>
+                                <a href="../monitor/index.html"> Monitores </a>
+                            </li>
+                            <li>
+                                <a href="../patrimonio/index.html"> Patrimônios </a>
                             </li>
                         </ul>
                     </div>
@@ -70,7 +70,7 @@
                     <div class="col-md-12">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Monitor | Criar</h3>
+                                <h3 class="panel-title">Computador | Criar</h3>
                             </div>
                             <div class="panel-body">
                                 <form role="form">
@@ -83,22 +83,54 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label" for="3">
-                                            Tela
+                                        <label class="control-label" for="2">
+                                            Licenças
                                         </label>
-                                        <input class="form-control" id="3" placeholder="" name="tela" type="text">
+                                        <select class="js-example-basic-single form-control" name="licenca_id" id="2">
+                                            <option value=""> xxxx </option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label" for="4">
-                                            Nfe
+                                            Placa Mãe
                                         </label>
-                                        <input class="form-control" id="4" placeholder="" name="nfe" type="text">
+                                        <input class="form-control" id="4" placeholder="" name="placa_mae" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="3">
+                                            Memoria
+                                        </label>
+                                        <input class="form-control" id="3" placeholder="" name="memoria" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="6">
+                                            Processador
+                                        </label>
+                                        <input class="form-control" id="6" placeholder="" name="processador" type="text">
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label" for="5">
+                                            HD
+                                        </label>
+                                        <input class="form-control" id="5" placeholder="" name="hd" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="7">
+                                            Placa De Vídeo
+                                        </label>
+                                        <input class="form-control" id="7" placeholder="" name="placa_video" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="9">
+                                            NFe
+                                        </label>
+                                        <input class="form-control" id="9" placeholder="" name="nfe" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="11">
                                             Data Compra
                                         </label>
-                                        <input class="form-control" id="5" placeholder="" name="data_compra" type="date">
+                                        <input class="form-control" id="11" placeholder="" name="data_compra" type="date">
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label" for="10">

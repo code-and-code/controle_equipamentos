@@ -17,7 +17,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><span>Logo</span></a>
+                    <a class="navbar-brand" href="#"><span>Controle Equipamentos</span></a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
@@ -47,17 +47,17 @@
                             <li>
                                 <a href="../funcionarios/index.html.twig">Funcionarios</a>
                             </li>
-                            <li class="active">
-                                <a href="index.html">Periféricos</a>
+                            <li>
+                                <a href="../periferico//index.html">Periféricos</a>
                             </li>
                             <li >
-                                <a href="../computadores/index.html">Computadores</a>
+                                <a href="../computador/index.html">Computadores</a>
+                            </li>
+                            <li class="active">
+                                <a href="/index.html"> Monitores </a>
                             </li>
                             <li>
-                                <a href="../monitores/index.html"> Monitores </a>
-                            </li>
-                            <li>
-                                <a href="../patrimonios/índex.html"> Patrimônios </a>
+                                <a href="../patrimonio/índex.html"> Patrimônios </a>
                             </li>
                         </ul>
                     </div>
@@ -70,41 +70,47 @@
                     <div class="col-md-12">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Periféricos <a href="create.html" class="fa fa-plus pull-right"></a></h3>
-
+                                <h3 class="panel-title">Monitor | Editar</h3>
                             </div>
                             <div class="panel-body">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Equipamento</th>
-                                            <th>Modelo</th>
-                                            <th>Marca</th>
-                                            <th>Descrição</th>
-                                            <th>Nfe</th>
-                                            <th>Data Compra </th>
-                                            <th>Valor </th>
-                                            <th>#</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>xxxxx</td>
-                                            <td>xxxxx</td>
-                                            <td>xxxxx</td>
-                                            <td>xxxxx</td>
-                                            <td>xxxxx</td>
-                                            <td>xxxxx</td>
-                                            <td>xxxxx</td>
-                                            <td>xxxxx</td>
-                                            <td>
-                                                <a href="edit.html" class="fa fa-edit text-info"></a>
-                                                <a href="edit.html" class="fa fa-trash text-danger"></a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <form role="form">
+                                    <div class="form-group">
+                                        <label class="control-label" for="1">
+                                            Equipamento
+                                        </label>
+                                        <select class="js-example-basic-single form-control" name="equipamento_id" id="1">
+                                            <option value=""> xxxx </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="3">
+                                            Tela
+                                        </label>
+                                        <input class="form-control" id="3" placeholder="" name="tela" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="4">
+                                            Nfe
+                                        </label>
+                                        <input class="form-control" id="4" placeholder="" name="nfe" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="5">
+                                            Data Compra
+                                        </label>
+                                        <input class="form-control" id="5" placeholder="" name="data_compra" type="date">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="10">
+                                            Valor
+                                        </label>
+                                        <input class="form-control" id="10" placeholder="" name="valor" type="text">
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">
+                                        Cadastrar
+                                    </button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -124,7 +130,7 @@
                             Colaboradores : Adriano Vianna, Angelo Biscola
                         </p>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <p class="text-info text-right">
                             <br>
                             <br>

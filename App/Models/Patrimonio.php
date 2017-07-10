@@ -5,7 +5,7 @@ use Cac\Model\Model;
 
 class Patrimonio extends Model {
 
-    protected $table      = "patrimonios";
+    protected $table      = "patrimonio";
 
     public function Local()
     {

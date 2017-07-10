@@ -4,21 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d6de52793ee09b256f213eaf1659c139",
-    "content-hash": "7826647666b4701571e0ef609aec9fa4",
+    "content-hash": "b53f4df8c5929c885db0940210f66427",
     "packages": [
         {
             "name": "codeandcode/micro-fwk",
-            "version": "1.7",
+            "version": "1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/code-and-code/micro-fwk.git",
-                "reference": "fa7a49b3b417831b28c4dc8c75f9eab394a01007"
+                "reference": "ac543e016618ab527a007ccd54661124f52a48e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/code-and-code/micro-fwk/zipball/fa7a49b3b417831b28c4dc8c75f9eab394a01007",
-                "reference": "fa7a49b3b417831b28c4dc8c75f9eab394a01007",
+                "url": "https://api.github.com/repos/code-and-code/micro-fwk/zipball/ac543e016618ab527a007ccd54661124f52a48e5",
+                "reference": "ac543e016618ab527a007ccd54661124f52a48e5",
                 "shasum": ""
             },
             "require": {
@@ -46,7 +45,7 @@
                 "projecto inical",
                 "start"
             ],
-            "time": "2017-07-10 13:39:45"
+            "time": "2017-07-10T14:58:29+00:00"
         },
         {
             "name": "codeguy/upload",
@@ -93,7 +92,7 @@
                 "upload",
                 "validation"
             ],
-            "time": "2013-07-07 17:01:41"
+            "time": "2013-07-07T17:01:41+00:00"
         },
         {
             "name": "desarrolla2/cache",
@@ -148,7 +147,7 @@
                 "mysql",
                 "redis"
             ],
-            "time": "2017-01-18 12:58:33"
+            "time": "2017-01-18T12:58:33+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -224,7 +223,7 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2017-03-15 19:32:56"
+            "time": "2017-03-15T19:32:56+00:00"
         },
         {
             "name": "plasticbrain/php-flash-messages",
@@ -266,7 +265,7 @@
                 "messages",
                 "session"
             ],
-            "time": "2016-04-01 08:39:38"
+            "time": "2016-04-01T08:39:38+00:00"
         },
         {
             "name": "twig/twig",
@@ -528,7 +527,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2016-09-30 07:12:33"
+            "time": "2016-09-30T07:12:33+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -575,7 +574,7 @@
                     "email": "me@mikevanriel.com"
                 }
             ],
-            "time": "2016-11-25 06:54:22"
+            "time": "2016-11-25T06:54:22+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -789,7 +788,7 @@
             "keywords": [
                 "template"
             ],
-            "time": "2015-06-21 13:50:34"
+            "time": "2015-06-21T13:50:34+00:00"
         },
         {
             "name": "phpunit/php-timer",

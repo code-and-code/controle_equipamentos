@@ -13,6 +13,7 @@ class Init extends Bootstrap
         require 'routes/login.php';
         require 'routes/log.php';
         require 'routes/funcionario.php';
+        require 'routes/periferico.php';
 
         $ar['register']       = ['route' => '/register',      'controller' => 'AuthController', 'method'=>'GET', 'action' => 'getRegister' ];
         $ar['register.store'] = ['route' => '/register/store','controller' => 'AuthController', 'method'=>'POST','action' => 'postRegister'];

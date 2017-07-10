@@ -8,5 +8,5 @@ class Monitor extends Model {
 
     use PatrimonioTrait;
 
-    protected $table      = "monitores";
+    protected $table      = "monitor";
 }

@@ -17,7 +17,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><span>Logo</span></a>
+                    <a class="navbar-brand" href="#"><span>Controle Equipamentos</span></a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
@@ -48,16 +48,16 @@
                                 <a href="../funcionarios/index.html.twig">Funcionarios</a>
                             </li>
                             <li>
-                                <a href="../perifericos/index.html">Periféricos</a>
+                                <a href="../periferico//index.html">Periféricos</a>
+                            </li>
+                            <li>
+                                <a href="../computador/index.html">Computadores</a>
+                            </li>
+                            <li>
+                                <a href="../monitor/index.html"> Monitores </a>
                             </li>
                             <li class="active">
-                                <a href="../computadores/index.html">Computadores</a>
-                            </li>
-                            <li>
-                                <a href="../monitores/index.html"> Monitores </a>
-                            </li>
-                            <li>
-                                <a href="../patrimonios/index.html"> Patrimônios </a>
+                                <a href="index.html"> Patrimônios </a>
                             </li>
                         </ul>
                     </div>
@@ -70,49 +70,39 @@
                     <div class="col-md-12">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Computador <a href="create.html.twig" class="fa fa-plus pull-right"></a></h3>
-
+                                <h3 class="panel-title">Patrimônios | Editar</h3>
                             </div>
                             <div class="panel-body">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Equipamento</th>
-                                            <th>Modelo</th>
-                                            <th>Marca</th>
-                                            <th>Memoria</th>
-                                            <th>Placa</th>
-                                            <th>Hd</th>
-                                            <th>Processador</th>
-                                            <th>Placa De Vídeo</th>
-                                            <th>NFe</th>
-                                            <th>Data Compra</th>
-                                            <th>Valor</th>
-                                            <th>#</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>xxxx</td>
-                                            <td>xxxx</td>
-                                            <td>xxxx</td>
-                                            <td>xxxx</td>
-                                            <td>xxxx</td>
-                                            <td>xxxx</td>
-                                            <td>xxxx</td>
-                                            <td>xxxx</td>
-                                            <td>xxxx</td>
-                                            <td>xxxx</td>
-                                            <td>xxxx</td>
-                                            <td>
-                                                <a href="edit.html.twig" class="fa fa-edit text-info"></a>
-                                                <a href="edit.html.twig" class="fa fa-trash text-danger"></a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <form role="form">
+                                    <div class="form-group">
+                                        <label class="control-label" for="1">
+                                            Número Patrimonial
+                                        </label>
+                                        <input class="form-control" id="1" name="num_patrimonial" placeholder="" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="2">
+                                            Número Serial
+                                        </label>
+                                        <input class="form-control" id="2" placeholder="" name="serial" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="3">
+                                            Funcionario
+                                        </label>
+                                        <input class="form-control" id="3" placeholder="" name="Funcionario" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="4">
+                                            Local
+                                        </label>
+                                        <input class="form-control" id="4" placeholder="" name="local" type="text">
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">
+                                        Cadastrar
+                                    </button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -122,17 +112,17 @@
         <footer class="section section-primary">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6">
-                        <h1>Footer header</h1>
+                    <div class="col-sm-8">
+                        <h1>Controle Equipamentos</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisici elit,
+                            Esse sistema serve exclusivamente para controle de equipamentos empresarial
                             <br>
-                            sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+                            Sistema desenvolvido pela empresa : Code&Code
                             <br>
-                            Ut enim ad minim veniam, quis nostrud
+                            Colaboradores : Adriano Vianna, Angelo Biscola
                         </p>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <p class="text-info text-right">
                             <br>
                             <br>
