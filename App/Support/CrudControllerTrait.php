@@ -82,6 +82,29 @@ trait CrudControllerTrait
         }
     }
 
+    public function findBy()
+    {
+        try {
+
+            $column = current(array_keys($_GET));
+            $value  = $_GET[$column];
+            $column = $column."_id";
+
+            if(in_array($column,$this->model->getAttributes()))
+            {
+                $equipamentos = $this->model->where($column, '=' ,$value)->get();
+                echo $this->render('equipamento.index', ['results' =>$equipamentos]);
+            }
+            else{
+
+                throw new \Exception('Não foi possível realizar está pesquisa');
+            }
+        }catch(\Exception $e)
+        {
+            $this->fail($e);
+        }
+    }
+
     public function fail($e)
     {
         if ($e instanceof ModelException) {
