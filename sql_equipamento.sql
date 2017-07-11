@@ -1,16 +1,3 @@
-# ************************************************************
-# Sequel Pro SQL dump
-# Version 4096
-#
-# http://www.sequelpro.com/
-# http://code.google.com/p/sequel-pro/
-#
-# Host: 127.0.0.1 (MySQL 5.7.16)
-# Database: equipamento
-# Generation Time: 2017-07-07 12:54:49 +0000
-# ************************************************************
-
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -43,41 +30,6 @@ VALUES
 	(3,'periferico',NULL,NULL);
 
 /*!40000 ALTER TABLE `categorias` ENABLE KEYS */;
-UNLOCK TABLES;
-
-
-# Dump of table changelog
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `changelog`;
-
-CREATE TABLE `changelog` (
-  `id` decimal(20,0) DEFAULT NULL,
-  `applied_at` varchar(25) DEFAULT NULL,
-  `version` varchar(25) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-LOCK TABLES `changelog` WRITE;
-/*!40000 ALTER TABLE `changelog` DISABLE KEYS */;
-
-INSERT INTO `changelog` (`id`, `applied_at`, `version`, `description`)
-VALUES
-	(14993613142704,'2017-07-06 19:38:29','','usuarios'),
-	(14993616406320,'2017-07-06 19:38:29','','categoria'),
-	(14993616406321,'2017-07-06 19:38:30','','setor'),
-	(14993616406322,'2017-07-06 19:38:30','','local'),
-	(14993616406323,'2017-07-06 19:38:30','','funcionario'),
-	(14993616406325,'2017-07-06 19:38:30','','licenca'),
-	(14993616406326,'2017-07-06 19:38:30','','patrimonio'),
-	(14993616406421,'2017-07-06 19:38:31','','marca'),
-	(14993616406422,'2017-07-06 19:38:31','','equipamento'),
-	(14993616406423,'2017-07-06 19:38:31','','periferico'),
-	(14993616406424,'2017-07-06 19:38:31','','monitor'),
-	(14993616406425,'2017-07-06 19:38:32','','compuatdor'),
-	(14993616406426,'2017-07-06 19:38:32','','historio');
-
-/*!40000 ALTER TABLE `changelog` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
@@ -301,6 +253,22 @@ CREATE TABLE `setores` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
+# Dump of table historios
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `historios`;
+
+CREATE TABLE `historios` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `type_id` int(255) DEFAULT NULL,
+  `type_name` varchar(255) DEFAULT NULL,
+  `descricao` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
 # Dump of table usuarios
 # ------------------------------------------------------------
 
@@ -320,11 +288,10 @@ LOCK TABLES `usuarios` WRITE;
 
 INSERT INTO `usuarios` (`id`, `email`, `password`, `created_at`, `updated_at`)
 VALUES
-	(1,'admin@admin','e10adc3949ba59abbe56e057f20f883e',NULL,NULL);
+	(1,'admin@admin.com','e10adc3949ba59abbe56e057f20f883e',NULL,NULL);
 
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
-
 
 
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

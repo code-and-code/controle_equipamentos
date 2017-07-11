@@ -32,10 +32,4 @@ class EquipamentoController extends Action
         $categoria  = new Categoria();
         echo $this->render('equipamento.edit', ['marcas' => $marca->All(), 'categorias' => $categoria->all(),'equipamento' => $this->model->find($_GET['id'])]);
     }
-
-    public function findBySetor()
-    {
-        $funcionarios = $this->model->where('setor_id', '=' ,$_GET['id'])->get();
-        echo $this->render('funcionario.index', ['results' =>$funcionarios]);
-    }
 }
