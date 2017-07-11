@@ -17,4 +17,16 @@ class Computador extends Model {
     {
         return $this->hasMany(Licenca::class);
     }
+
+    public function Equipamento()
+    {
+        return $this->hasOne(Equipamento::class);
+    }
+
+    public function Patrimonio()
+    {
+        return $this->hasOne(Patrimonio::class);
+    }
+
+
 }

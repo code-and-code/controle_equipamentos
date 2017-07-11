@@ -2,7 +2,6 @@
 namespace App\Controllers;
 
 use App\Models\Categoria;
-use App\Models\Equipamento;
 use App\Models\Funcionario;
 use App\Models\Local;
 use App\Models\Patrimonio;

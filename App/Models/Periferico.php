@@ -11,4 +11,13 @@ class Periferico extends Model {
     protected $table      = "Perifericos";
     public    $requested    = ['equipamento_id', 'descricao', 'nfe', 'valor', 'data_compra'];
 
+    public function Equipamento()
+    {
+        return $this->hasOne(Equipamento::class);
+    }
+
+    public function Patrimonio()
+    {
+        return $this->hasOne(Patrimonio::class);
+    }
 }

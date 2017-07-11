@@ -8,7 +8,7 @@
                     <h3 class="panel-title">Patrimônios | Editar</h3>
                 </div>
                 <div class="panel-body">
-                    <form role="form">
+                    <form role="form" action="/patrimonio/atualizar" method="post">
                         <div class="form-group">
                             <label class="control-label" for="1">
                                 Número Patrimonial
@@ -19,20 +19,40 @@
                             <label class="control-label" for="2">
                                 Número Serial
                             </label>
-                            <input class="form-control" id="2" placeholder="" name="serial" type="text">
+                            <input class="form-control" id="2" placeholder="" name="serial" type="text" value="{{ patrimonio.serial }}">
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="3">
                                 Funcionario
                             </label>
-                            <input class="form-control" id="3" placeholder="" name="Funcionario" type="text">
+                            <select class="js-example-basic-single form-control" name="funcionario_id" id="1">
+                                {% for funcionario in funcionarios %}
+                                    <option value="{{  funcionario.id }}"> {{ funcionario.nome }}</option>
+                                {% endfor %}
+                            </select>
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="4">
                                 Local
                             </label>
-                            <input class="form-control" id="4" placeholder="" name="local" type="text">
+                            <select class="js-example-basic-single form-control" name="local_id" id="1">
+                                {% for local in locais %}
+                                    <option value="{{  local.id }}"> {{ local.nome }}</option>
+                                {% endfor %}
+                            </select>
                         </div>
+                        <div class="form-group">
+                            <label class="control-label" for="4">
+                                Categoria
+                            </label>
+                            <select class="js-example-basic-single form-control" name="local_id" id="1">
+                                {% for categoria in categorias %}
+                                    <option value="{{  categoria.id }}"> {{ categoria.nome }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <input name="patrimonio_id" type="hidden">
 
                         <button type="submit" class="btn btn-primary">
                             Cadastrar

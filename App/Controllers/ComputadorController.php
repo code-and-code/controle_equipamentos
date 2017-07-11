@@ -2,24 +2,21 @@
 namespace App\Controllers;
 
 use App\Models\Computador;
-use App\Models\Equipamento;
-use App\Support\CrudControllerTrait;
+use App\Support\PatrimonioCrudControllerTrait;
 use Cac\Controller\Action;
+use Cac\Support\Validation;
 
 class ComputadorController extends Action
 {
     public $model;
+    public $categoria; //nome do array na view que representa a classe
 
-    use CrudControllerTrait;
+    use PatrimonioCrudControllerTrait;
 
     public function __construct()
     {
         $this->model = new Computador();
+        $this->categoria = 'computador';
     }
 
-    public function create()
-    {
-        $equipamento = new Equipamento();
-        echo $this->render('computador.create', ['equipamentos' => $equipamento->All()]);
-    }
 }

@@ -27,9 +27,9 @@
                             {% for  periferico in results %}
                             <tr>
                                 <td>{{ periferico.id }}</td>
-                                <td>{{ periferico.Equipamentos().nome }}</td>
-                                <td>{{ periferico.Equipamentos().modelo }}</td>
-                                <td>{{ periferico.Equipamentos().Marca().nome }}</td>
+                                <td>{{ periferico.Equipamento().nome }}</td>
+                                <td>{{ periferico.Equipamento().modelo }}</td>
+                                <td>{{ periferico.Equipamento().Marca().nome }}</td>
                                 <td>{{ periferico.descricao }}</td>
                                 <td>{{ periferico.nfe }}</td>
                                 <td>{{ periferico.data_compra }}</td>
