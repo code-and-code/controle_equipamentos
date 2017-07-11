@@ -54,7 +54,7 @@ trait PatrimonioCrudControllerTrait
 
     public function create()
     {
-        echo $this->render("{$this->getNameModel()}.create", ['equipamentos' => $this->getEquipamentoClass()->All(), 'locais' => $this->getLocalClass()->all(), 'funcionarios' => $this->getFuncionarioClass()->all()]);
+        echo $this->render("{$this->getNameModel()}.create", ['equipamentos' => $this->getEquipamentoClass()->all(), 'locais' => $this->getLocalClass()->all(), 'funcionarios' => $this->getFuncionarioClass()->all()]);
     }
 
     public function store()
