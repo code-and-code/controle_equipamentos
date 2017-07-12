@@ -8,7 +8,7 @@ class Periferico extends Model {
 
     use PatrimonioTrait;
 
-    protected $table      = "Perifericos";
+    protected $table      = "perifericos";
     public    $requested    = ['equipamento_id', 'descricao', 'nfe', 'valor', 'data_compra'];
 
     public function Equipamento()
