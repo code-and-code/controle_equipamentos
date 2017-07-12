@@ -11,19 +11,19 @@
                 <div class="panel-body">
                     <form role="form" action="/equipamento/atualizar" method="post">
 
-                        <input type="hidden" name="id" value="{{ equipamento.id }}">
+                        <input required type="hidden" name="id" value="{{ equipamento.id }}">
 
                         <div class="form-group">
                             <label class="control-label" for="2">
                                 Nome
                             </label>
-                            <input class="form-control" id="2" placeholder="" name="nome" type="text" value="{{ equipamento.nome }}">
+                            <input required class="form-control" id="2" placeholder="" name="nome" type="text" value="{{ equipamento.nome }}">
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="2">
                                 Modelo
                             </label>
-                            <input class="form-control" id="2" placeholder="" name="modelo" type="text" value="{{ equipamento.modelo }}">
+                            <input required class="form-control" id="2" placeholder="" name="modelo" type="text" value="{{ equipamento.modelo }}">
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="1">

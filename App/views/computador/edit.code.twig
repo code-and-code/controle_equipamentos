@@ -25,25 +25,25 @@
                                 <label class="control-label" for="4">
                                     Placa Mãe
                                 </label>
-                                <input class="form-control" id="4" placeholder="" name="computador[placa_mae]" type="text" value="{{ computador.placa_mae }}" >
+                                <input required class="form-control" id="4" placeholder="" name="computador[placa_mae]" type="text" value="{{ computador.placa_mae }}" >
                             </div>
                             <div class="col-xs-3">
                                 <label class="control-label" for="4">
                                     Memória
                                 </label>
-                                <input class="form-control" id="3" placeholder="" name="computador[memoria]" type="text" value=" {{ computador.memoria }}">
+                                <input required class="form-control" id="3" placeholder="" name="computador[memoria]" type="text" value=" {{ computador.memoria }}">
                             </div>
                             <div class="col-xs-4">
                                 <label class="control-label" for="4">
                                     Processador
                                 </label>
-                                <input class="form-control" id="6" placeholder="" name="computador[processador]" type="text" value="{{ computador.processador }}">
+                                <input required class="form-control" id="6" placeholder="" name="computador[processador]" type="text" value="{{ computador.processador }}">
                             </div>
                             <div class="col-xs-2">
                                 <label class="control-label" for="4">
                                     HD
                                 </label>
-                                <input class="form-control" id="5" placeholder="" name="computador[hd]" type="text" value="{{ computador.hd }}">
+                                <input required class="form-control" id="5" placeholder="" name="computador[hd]" type="text" value="{{ computador.hd }}">
                             </div>
                         </div>
                         </br>
@@ -51,27 +51,27 @@
                             <label class="control-label" for="7">
                                 Placa De Vídeo
                             </label>
-                            <input class="form-control" id="7" placeholder="" name="computador[placa_video]" type="text" value="{{ computador.placa_video }}">
+                            <input required class="form-control" id="7" placeholder="" name="computador[placa_video]" type="text" value="{{ computador.placa_video }}">
                         </div>
 
                         <div class="form-group">
                             <label class="control-label" for="9">
                                 NFe
                             </label>
-                            <input class="form-control" id="9" placeholder="" name="computador[nfe]" type="text" value="{{ computador.nfe }}">
+                            <input required class="form-control" id="9" placeholder="" name="computador[nfe]" type="text" value="{{ computador.nfe }}">
                         </div>
                         <div class="row">
                             <div class="col-xs-6">
                                 <label class="control-label" for="4">
                                     Data Compra
                                 </label>
-                                <input class="form-control" id="11" placeholder="" name="computador[data_compra]" type="date" value="{{  computador.data_compra }}">
+                                <input required class="form-control" id="11" placeholder="" name="computador[data_compra]" type="date" value="{{  computador.data_compra }}">
                             </div>
                             <div class="col-xs-6">
                                 <label class="control-label" for="4">
                                     Valor
                                 </label>
-                                <input class="form-control" id="10" placeholder="" name="computador[valor]" type="text" value="{{ computador.valor }}">
+                                <input required class="form-control" id="10" placeholder="" name="computador[valor]" type="text" value="{{ computador.valor }}">
                             </div>
                         </div>
                         <br>
@@ -80,13 +80,13 @@
                                 <label class="control-label" for="4">
                                     Num Patrimônio
                                 </label>
-                                <input type="text" class="form-control" name="patrimonio[num_patrimonial]" value="{{ computador.Patrimonio().num_patrimonial }}">
+                                <input required type="text" class="form-control" name="patrimonio[num_patrimonial]" value="{{ computador.Patrimonio().num_patrimonial }}">
                             </div>
                             <div class="col-xs-3">
                                 <label class="control-label" for="4">
                                     Serial
                                 </label>
-                                <input type="text" class="form-control" name="patrimonio[serial]" value="{{ computador.Patrimonio().serial }}" >
+                                <input required type="text" class="form-control" name="patrimonio[serial]" value="{{ computador.Patrimonio().serial }}" >
                             </div>
                             <div class="col-xs-4">
                                 <label class="control-label" for="4">
@@ -113,7 +113,7 @@
                         </div>
                         <br>
 
-                        <input  type="hidden" name="id" value="{{ computador.id }}">
+                        <input required  type="hidden" name="id" value="{{ computador.id }}">
                         <button type="submit" class="btn btn-primary">
                             Cadastrar
                         </button>
