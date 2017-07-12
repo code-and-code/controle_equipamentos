@@ -64,7 +64,7 @@
                                     Funcionário | Setor
                                 </label>
                                 <select class="js-example-basic-single form-control" name="patrimonio[funcionario_id]" id="1">
-                                    <option value="{{  monitor.funcionario_id }}"> {{ monitor.Funcionario().nome }} || {{  monitor.Funcionario().Setor().nome }}</option>
+                                    <option value="{{  monitor.Patrimonio().funcionario_id }}"> {{ monitor.Patrimonio().Funcionario().nome }} || {{  monitor.Patrimonio().Funcionario().Setor().nome }}</option>
                                     {% for funcionario in funcionarios %}
                                         <option value="{{  funcionario.id }}"> {{ funcionario.nome }} || {{  funcionario.Setor().nome }}</option>
                                     {% endfor %}
@@ -75,7 +75,7 @@
                                     Local
                                 </label>
                                 <select class="js-example-basic-single form-control" name="patrimonio[local_id]" id="1">
-                                    <option value="{{  monitor.local_id }}"> {{ monitor.Local().nome }}</option>
+                                    <option value="{{  monitor.Patrimonio().local_id }}"> {{ monitor.Patrimonio().Local().nome }}</option>
                                     {% for local in locais %}
                                         <option value="{{  local.id }}"> {{ local.nome }}</option>
                                     {% endfor %}

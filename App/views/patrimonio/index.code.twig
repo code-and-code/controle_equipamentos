@@ -5,7 +5,7 @@
         <div class="col-md-12">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Patrimônios <a href="/patrimonio/novo" class="fa fa-plus pull-right"></a></h3>
+                    <h3 class="panel-title">Patrimônios </h3>
 
                 </div>
                 <div class="panel-body">
@@ -15,10 +15,8 @@
                                 <th>ID</th>
                                 <th>Número Patrimonial</th>
                                 <th>Número Serial</th>
-                                <th>Categoria</th>
                                 <th>Funcionario</th>
                                 <th>Local</th>
-                                <th>#</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -27,13 +25,8 @@
                                 <td>{{ patrimonio.id }}</td>
                                 <td>{{ patrimonio.num_patrimonial }}</td>
                                 <td>{{ patrimonio.serial }}</td>
-                                <td>{{ patrimonio.Categoria().nome }}</td>
-                                <td>{{ patrimonio.Funcionario().nome }} || {{ patrimonio.Funcionario().setor }}</td>
+                                <td>{{ patrimonio.Funcionario().nome }} || {{ patrimonio.Funcionario().Setor().nome }}</td>
                                 <td>{{ patrimonio.Local().nome }}</td>
-                                <td>
-                                    <a href="/patrimonio/editar?id={{ patrimonio.id }}" class="fa fa-edit text-info"></a>
-                                    <a href="/patrimonio/deletar?id={{ patrimonio.id }}" class="fa fa-trash text-danger"></a>
-                                </td>
                             </tr>
                         {% endfor %}
                         </tbody>
