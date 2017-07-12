@@ -23,10 +23,10 @@ class FuncionarioController extends Action
         echo $this->render('funcionario.create', ['setores' => $setor->All()]);
     }
 
-    public function edit()
+    public function edit($id)
     {
         $setor = new Setor();
-        echo $this->render('funcionario.edit', ['setores' => $setor->All(),'funcionario' => $this->model->find($_GET['id'])]);
+        echo $this->render('funcionario.edit', ['setores' => $setor->All(),'funcionario' => $this->model->find($id)]);
     }
 
     public function findBySetor()

@@ -9,7 +9,7 @@ class Monitor extends Model {
     use PatrimonioTrait;
 
     protected $table      = "monitores";
-    public    $requested    = ['equipamento_id', 'tela', 'nfe', 'valor', 'data_compra'];
+    public    $requested  = ['equipamento_id', 'tela', 'nfe', 'valor', 'data_compra'];
 
     public function Equipamento()
     {

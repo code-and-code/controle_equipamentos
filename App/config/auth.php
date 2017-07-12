@@ -7,7 +7,7 @@ return [
         'viewRegister'   => 'register',
         'required'       => ['email','password'],
         'redirect'       => '/user',
-        'notauthorized'  => '/auth'
+        'notauthorized'  => '/login/entrar'
     ],
 
 ];
