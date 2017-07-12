@@ -6,5 +6,5 @@ use App\Start;
 
 $bootstrap = new Init();
 
-$start = new Start();
-$start->boot();
+//$start = new Start();
+//$start->boot();
