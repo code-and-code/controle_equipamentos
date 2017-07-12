@@ -18,6 +18,7 @@
                                 <th>Número Serial</th>
                                 <th>Fncionario</th>
                                 <th>Local</th>
+                                <th>Valor</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -29,6 +30,7 @@
                                 <td>{{ patrimonio.serial }}</td>
                                 <td>{{ patrimonio.Funcionario().nome }} || {{ patrimonio.Funcionario().Setor().nome }}</td>
                                 <td>{{ patrimonio.Local().nome }}</td>
+                                <td>R$ {{ patrimonio.Item.valor }}</td>
 
                             </tr>
                         {% endfor %}
