@@ -27,6 +27,4 @@ class Computador extends Model {
     {
         return $this->hasOne(Patrimonio::class);
     }
-
-
 }

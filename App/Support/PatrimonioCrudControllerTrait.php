@@ -64,7 +64,7 @@ trait PatrimonioCrudControllerTrait
             Validation::requireModel($this->getModelClass(),$_POST[$this->getCategory()]);
             Validation::requireModel($this->getPatrimonioClass(), $_POST['patrimonio']);
 
-            $patrimonio = $_POST['patrimonio'] + ['class' => get_class()];
+            $patrimonio = $_POST['patrimonio'] + ['class' => get_class($this->getModelClass())];
             $patrimonio =  $this->getPatrimonioClass()->create($patrimonio);
 
             $computador = $_POST[$this->getCategory()] + ['patrimonio_id' => $patrimonio->id];

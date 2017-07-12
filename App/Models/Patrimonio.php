@@ -18,4 +18,12 @@ class Patrimonio extends Model {
         return $this->hasOne(Funcionario::class);
     }
 
+    public  function Item()
+    {
+        $obj = new $this->class;
+        return $obj->where('patrimonio_id', '=', $this->id)->First();
+
+    }
+
+
 }

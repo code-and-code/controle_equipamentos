@@ -14,8 +14,9 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Número Patrimonial</th>
+                                <th>Equipamento</th>
                                 <th>Número Serial</th>
-                                <th>Funcionario</th>
+                                <th>Fncionario</th>
                                 <th>Local</th>
                             </tr>
                         </thead>
@@ -24,9 +25,11 @@
                             <tr>
                                 <td>{{ patrimonio.id }}</td>
                                 <td>{{ patrimonio.num_patrimonial }}</td>
+                                <td>{{ patrimonio.Item.Equipamento.Categoria.nome }} || {{ patrimonio.Item.Equipamento.nome }}</td>
                                 <td>{{ patrimonio.serial }}</td>
                                 <td>{{ patrimonio.Funcionario().nome }} || {{ patrimonio.Funcionario().Setor().nome }}</td>
                                 <td>{{ patrimonio.Local().nome }}</td>
+
                             </tr>
                         {% endfor %}
                         </tbody>
