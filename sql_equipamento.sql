@@ -150,6 +150,7 @@ CREATE TABLE `patrimonios` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `num_patrimonial` varchar(255) DEFAULT NULL,
   `serial` varchar(255) DEFAULT NULL,
+  `class` varchar(255) DEFAULT NULL,
   `local_id` int(11) unsigned NOT NULL,
   `funcionario_id` int(11) unsigned NOT NULL,
   `created_at` datetime DEFAULT NULL,
