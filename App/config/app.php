@@ -5,11 +5,17 @@ return [
     'public'    => false,
     'timezone' => 'UTC',
 
-    'database' => [ 'host'     => '127.0.0.1',
+    'database' => [ 'host'     => 'mysql873.umbler.com:41890',
+        'dbname'   => 'equipamento',
+        'username' => 'equipamento',
+        'password' =>  'info1605'
+    ],
+
+    /*'database' => [ 'host'     => '127.0.0.1',
         'dbname'   => 'equipamento',
         'username' => 'root',
         'password' =>  '123456'
-    ],
+    ],*/
 
     'layout' => [
 
