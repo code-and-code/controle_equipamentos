@@ -11,12 +11,6 @@ return [
         'password' =>  'info1605'
     ],
 
-    /*'database' => [ 'host'     => '127.0.0.1',
-        'dbname'   => 'equipamento',
-        'username' => 'root',
-        'password' =>  '123456'
-    ],*/
-
     'layout' => [
 
         'folder'     => '../App/views/',
