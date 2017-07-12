@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/code-and-code/micro-fwk.git",
-                "reference": "333d392ca9ca7c774bfa3ee3b8c5e59e5b79bdba"
+                "reference": "032b4ef838ce89cccddd6f75e7fbfd28349dc22c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/code-and-code/micro-fwk/zipball/333d392ca9ca7c774bfa3ee3b8c5e59e5b79bdba",
-                "reference": "333d392ca9ca7c774bfa3ee3b8c5e59e5b79bdba",
+                "url": "https://api.github.com/repos/code-and-code/micro-fwk/zipball/032b4ef838ce89cccddd6f75e7fbfd28349dc22c",
+                "reference": "032b4ef838ce89cccddd6f75e7fbfd28349dc22c",
                 "shasum": ""
             },
             "require": {
@@ -46,7 +46,7 @@
                 "projecto inical",
                 "start"
             ],
-            "time": "2017-07-10 20:24:27"
+            "time": "2017-07-11 19:53:48"
         },
         {
             "name": "codeguy/upload",
