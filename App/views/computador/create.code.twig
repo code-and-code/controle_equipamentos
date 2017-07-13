@@ -60,17 +60,27 @@
                             <input required class="form-control" id="9" placeholder="" name="computador[nfe]" type="text">
                         </div>
                         <div class="row">
-                            <div class="col-xs-6">
+                            <div class="col-xs-4">
                                 <label class="control-label" for="4">
                                     Data Compra
                                 </label>
                                 <input required class="form-control" id="11" placeholder="" name="computador[data_compra]" type="date">
                             </div>
-                            <div class="col-xs-6">
+                            <div class="col-xs-4">
                                 <label class="control-label" for="4">
                                     Valor
                                 </label>
                                 <input required class="form-control" id="10" placeholder="" name="computador[valor]" type="text">
+                            </div>
+                            <div class="col-xs-4">
+                                <label class="control-label" for="4">
+                                    Centro De Custo
+                                </label>
+                                <select class="js-example-basic-single form-control" name="patrimonio[local_id]" id="1">
+                                {% for custo in custos %}
+                                    <option value="{{  custo.id }}"> {{ custo.nome }}</option>
+                                {% endfor %}
+                                </select>
                             </div>
                         </div>
                         <br>

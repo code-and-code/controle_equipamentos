@@ -66,6 +66,7 @@
                                     Funcionário | Setor
                                 </label>
                                 <select class="js-example-basic-single form-control" name="patrimonio[funcionario_id]" id="1">
+                                    <option value="0">Não possui funcionário responsável</option>
                                     {% if model %}
                                         <option value="{{ model.Patrimonio().funcionario_id }}"> {{ model.Patrimonio().Funcionario().nome }} || {{ model.Patrimonio().Funcionario().Setor().nome }}</option>
                                     {% endif %}
