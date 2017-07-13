@@ -14,6 +14,9 @@
                                 Equipamento
                             </label>
                             <select class="js-example-basic-single form-control" name="periferico[equipamento_id]" id="1" >
+                                {% if model %}
+                                    <option value="{{ model.equipamento_id }}">{{ model.Equipamento.nome }} || {{ model.Equipamento.modelo }}</option>
+                                {% endif %}
                                 {% for equipamento in equipamentos %}
                                     <option value="{{  equipamento.id }}"> {{ equipamento.nome }} || {{ equipamento.modelo }}</option>
                                 {% endfor %}
@@ -23,25 +26,25 @@
                             <label class="control-label" for="2">
                                 Descrição
                             </label>
-                            <input class="form-control" id="2" placeholder="" name="periferico[descricao]" type="text">
+                            <input class="form-control" id="2" placeholder="" name="periferico[descricao]" type="text" value="{{ model.descricao }}">
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="3">
                                 Nfe
                             </label>
-                            <input required class="form-control" id="3" placeholder="" name="periferico[nfe]" type="text">
+                            <input required class="form-control" id="3" placeholder="" name="periferico[nfe]" type="text" value="{{ model.nfe }}">
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="4">
                                 Data Da Compra
                             </label>
-                            <input required class="form-control" id="4" placeholder="" name="periferico[data_compra]" type="date">
+                            <input required class="form-control" id="4" placeholder="" name="periferico[data_compra]" type="date" value="{{ model.data_compra }}">
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="5">
                                 Valor
                             </label>
-                            <input required class="form-control" id="5" placeholder="" name="periferico[valor]" type="text">
+                            <input required class="form-control" id="5" placeholder="" name="periferico[valor]" type="text" value="{{ model.valor }}">
                         </div>
 
                         <br>
@@ -56,13 +59,16 @@
                                 <label class="control-label" for="4">
                                     Serial
                                 </label>
-                                <input required type="text" class="form-control" name="patrimonio[serial]" >
+                                <input type="text" class="form-control" name="patrimonio[serial]" >
                             </div>
                             <div class="col-xs-4">
                                 <label class="control-label" for="4">
                                     Funcionário | Setor
                                 </label>
                                 <select class="js-example-basic-single form-control" name="patrimonio[funcionario_id]" id="1">
+                                    {% if model %}
+                                        <option value="{{ model.Patrimonio().funcionario_id }}"> {{ model.Patrimonio().Funcionario().nome }} || {{ model.Patrimonio().Funcionario().Setor().nome }}</option>
+                                    {% endif %}
                                     {% for funcionario in funcionarios %}
                                         <option value="{{  funcionario.id }}"> {{ funcionario.nome }} || {{  funcionario.Setor().nome }}</option>
                                     {% endfor %}
@@ -73,6 +79,9 @@
                                     Local
                                 </label>
                                 <select class="js-example-basic-single form-control" name="patrimonio[local_id]" id="1">
+                                    {% if model %}
+                                        <option value="{{ model.Patrimonio().local_id }}">{{  model.Patrimonio().Local().nome }}</option>
+                                    {% endif %}
                                     {% for local in locais %}
                                         <option value="{{  local.id }}"> {{ local.nome }}</option>
                                     {% endfor %}
