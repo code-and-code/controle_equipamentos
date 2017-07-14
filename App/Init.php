@@ -15,6 +15,7 @@ class Init extends Bootstrap
 
         require 'routes/setor.php';
         require 'routes/categoria.php';
+        require 'routes/custo.php';
         require 'routes/local.php';
         require 'routes/marca.php';
         require 'routes/licenca.php';

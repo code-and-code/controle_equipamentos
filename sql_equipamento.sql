@@ -140,6 +140,23 @@ CREATE TABLE `marcas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
+# Dump of table centro_custo
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `centro_custo`;
+
+CREATE TABLE `centro_custo` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+# Dump of table historios
+# ------------------------------------------------------------
+
 
 # Dump of table patrimonios
 # ------------------------------------------------------------
@@ -152,13 +169,14 @@ CREATE TABLE `patrimonios` (
   `serial` varchar(255) DEFAULT NULL,
   `class` varchar(255) DEFAULT NULL,
   `local_id` int(11) unsigned NOT NULL,
-  `funcionario_id` int(11) unsigned NOT NULL,
+  `funcionario_id` int(11) DEFAULT NULL,
+  `centro_custo_id` int(11) unsigned NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `patrimonio_local_id_foreign` (`local_id`),
-  KEY `patrimonio_funcionario_id_foreign` (`funcionario_id`),
-  CONSTRAINT `patrimonio_funcionario_id_foreign` FOREIGN KEY (`funcionario_id`) REFERENCES `funcionarios` (`id`) ON DELETE CASCADE,
+  KEY `patrimonio_centro_de_custo_id_foreign` (`centro_custo_id`),
+  CONSTRAINT `patrimonio_centro_de_custo_id_foreign` FOREIGN KEY (`centro_custo_id`) REFERENCES `centro_custo` (`id`) ON DELETE CASCADE,
   CONSTRAINT `patrimonio_local_id_foreign` FOREIGN KEY (`local_id`) REFERENCES `locais` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -250,9 +268,6 @@ CREATE TABLE `setores` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
-# Dump of table historios
-# ------------------------------------------------------------
 
 DROP TABLE IF EXISTS `historios`;
 

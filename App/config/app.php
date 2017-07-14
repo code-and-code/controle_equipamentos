@@ -29,6 +29,11 @@ return [
 
     'log'  => [ 'file' => 'main.log',
                'folder' => '../storage/log',
+    ],
+
+    'providers'=> [
+                    'App\StartProvider',
+                    'App\AuthProvider',
     ]
 ];
 
