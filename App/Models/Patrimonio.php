@@ -6,7 +6,7 @@ use Cac\Model\Model;
 class Patrimonio extends Model {
 
     protected $table      = "patrimonios";
-    public    $requested    = ['num_patrimonial', 'serial', 'funcionario_id', 'local_id'];
+    public    $requested    = ['num_patrimonial', 'funcionario_id', 'local_id'];
 
     public function Local()
     {

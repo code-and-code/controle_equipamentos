@@ -8,13 +8,13 @@
                     <h3 class="panel-title">Periféricos | Criar</h3>
                 </div>
                 <div class="panel-body">
-                    <form role="form" action="/periferico/gravar" method="post">
+                    <form role="form" action="/periferico/atualizar" method="post">
                         <div class="form-group">
                             <label class="control-label" for="1">
                                 Equipamento
                             </label>
                             <select class="js-example-basic-single form-control" name="periferico[equipamento_id]" id="1" >
-                                <option value="{{ periferico.equipamento_id }}">{{ periferico.Equipamento().nome }}</option>
+                                <option value="{{ periferico.equipamento_id }}">{{ periferico.Equipamento().nome }} || {{ periferico.Equipamento().modelo }}</option>
                                 {% for equipamento in equipamentos %}
                                     <option value="{{  equipamento.id }}"> {{ equipamento.nome }} || {{ equipamento.modelo }}</option>
                                 {% endfor %}
@@ -57,7 +57,7 @@
                                 <label class="control-label" for="4">
                                     Serial
                                 </label>
-                                <input required type="text" class="form-control" name="patrimonio[serial]" value="{{ periferico.Patrimonio().serial }}" >
+                                <input  type="text" class="form-control" name="patrimonio[serial]" value="{{ periferico.Patrimonio().serial }}" >
                             </div>
                             <div class="col-xs-4">
                                 <label class="control-label" for="4">
@@ -83,7 +83,7 @@
                             </div>
                         </div>
                         <br>
-
+                        <input value="{{ periferico.id }}" name="id" type="hidden">
                         <button type="submit" class="btn btn-primary">
                             Cadastrar
                         </button>

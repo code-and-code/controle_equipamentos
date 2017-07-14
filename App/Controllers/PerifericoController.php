@@ -19,4 +19,7 @@ class PerifericoController extends Action
         $this->categoria = 'periferico';
     }
 
+
+
+
 }
