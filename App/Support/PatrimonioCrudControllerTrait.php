@@ -115,7 +115,7 @@ trait PatrimonioCrudControllerTrait
 
             $model = $this->getModelClass()->find($_POST['id']);
 
-            $model->Patrimonio()->update($_POST['patrimonio']);
+            //$model->Patrimonio()->update($_POST['patrimonio']);
             
             $model->update($_POST[$this->getCategory()]);
 

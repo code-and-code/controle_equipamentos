@@ -12,7 +12,7 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>ID</th>
+                                <th>Patr.</th>
                                 <th>Equipamento</th>
                                 <th>Modelo</th>
                                 <th>Marca</th>
@@ -26,7 +26,7 @@
                         <tbody>
                             {% for  periferico in results %}
                             <tr>
-                                <td>{{ periferico.id }}</td>
+                                <td>{{ periferico.Patrimonio.num_patrimonial }}</td>
                                 <td>{{ periferico.Equipamento.nome }}</td>
                                 <td>{{ periferico.Equipamento.modelo }}</td>
                                 <td>{{ periferico.Equipamento.Marca().nome }}</td>

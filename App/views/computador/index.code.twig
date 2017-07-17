@@ -12,7 +12,7 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>ID</th>
+                                <th>Patr.</th>
                                 <th>Equipamento</th>
                                 <th>Modelo</th>
                                 <th>Marca</th>
@@ -30,7 +30,7 @@
                         <tbody>
                             {% for computador in results %}
                                 <tr>
-                                    <td>{{ computador.id }}</td>
+                                    <td>{{ computador.Patrimonio.num_patrimonial }}</td>
                                     <td>{{ computador.Equipamento().nome }}</td>
                                     <td>{{ computador.Equipamento().modelo }}</td>
                                     <td>{{ computador.Equipamento().Marca().nome }}</td>

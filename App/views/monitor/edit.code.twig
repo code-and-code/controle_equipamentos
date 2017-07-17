@@ -14,7 +14,7 @@
                                 Equipamento
                             </label>
                             <select class="js-example-basic-single form-control" name="monitor[equipamento_id]" id="1">
-                                <option value="{{  monitor.Equipamento().id }}"> {{ monitor.Equipamento.nome }} || {{ monitor.Equipamento.modelo }}</option>
+                                <option value="{{  model.Equipamento().id }}"> {{ model.Equipamento.nome }} || {{ model.Equipamento.modelo }}</option>
                                 {% for equipamento in equipamentos %}
                                     <option value="{{  equipamento.id }}"> {{ equipamento.nome }} || {{ equipamento.modelo }}</option>
                                 {% endfor %}
@@ -24,12 +24,12 @@
                             <label class="control-label" for="3">
                                 Tela
                             </label>
-                            <input required class="form-control" id="3" placeholder="" name="monitor[tela]" type="text" value="{{ monitor.tela }}">
+                            <input required class="form-control" id="3" placeholder="" name="monitor[tela]" type="text" value="{{ model.tela }}">
                         </div>
 
                             {% include('patrimonio/_inputs_patrimonio.code.twig') %}
 
-                        <input name="id" type="hidden" value="{{  monitor.id }}">
+                        <input name="id" type="hidden" value="{{  model.id }}">
                         <button type="submit" class="btn btn-primary">
                             Cadastrar
                         </button>
