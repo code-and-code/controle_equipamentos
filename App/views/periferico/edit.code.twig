@@ -26,18 +26,8 @@
                             </label>
                             <input class="form-control" id="2" placeholder="" name="periferico[descricao]" type="text" value="{{ periferico.descricao }}">
                         </div>
-                        <div class="form-group">
-                            <label class="control-label" for="3">
-                                Nfe
-                            </label>
-                            <input required class="form-control" id="3" placeholder="" name="periferico[nfe]" type="text" value="{{ periferico.nfe }}">
-                        </div>
 
-                        <br>
-
-                        {% include('patrimonio/_inputs_patrimonio.code.twig') %}
-
-                        <br>
+                            {% include('patrimonio/_inputs_patrimonio.code.twig') %}
 
                         <input value="{{ periferico.id }}" name="id" type="hidden">
                         <button type="submit" class="btn btn-primary">

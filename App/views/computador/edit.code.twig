@@ -46,7 +46,7 @@
                                 <input required class="form-control" id="5" placeholder="" name="computador[hd]" type="text" value="{{ computador.hd }}">
                             </div>
                         </div>
-                        </br>
+
                         <div class="form-group">
                             <label class="control-label" for="7">
                                 Placa De Vídeo
@@ -54,17 +54,7 @@
                             <input required class="form-control" id="7" placeholder="" name="computador[placa_video]" type="text" value="{{ computador.placa_video }}">
                         </div>
 
-                        <div class="form-group">
-                            <label class="control-label" for="9">
-                                NFe
-                            </label>
-                            <input required class="form-control" id="9" placeholder="" name="computador[nfe]" type="text" value="{{ computador.nfe }}">
-                        </div>
-
-                        <br>
                             {% include('patrimonio/_inputs_patrimonio.code.twig') %}
-
-                        <br>
 
                         <input required  type="hidden" name="id" value="{{ computador.id }}">
                         <button type="submit" class="btn btn-primary">
