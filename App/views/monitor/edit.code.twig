@@ -46,42 +46,7 @@
                         </div>
 
                         <br>
-                        <div class="row">
-                            <div class="col-xs-2">
-                                <label class="control-label" for="4">
-                                    Num Patrimônio
-                                </label>
-                                <input required type="text" class="form-control" name="patrimonio[num_patrimonial]" value="{{ monitor.Patrimonio().num_patrimonial }}">
-                            </div>
-                            <div class="col-xs-3">
-                                <label class="control-label" for="4">
-                                    Serial
-                                </label>
-                                <input required type="text" class="form-control" name="patrimonio[serial]" value="{{ monitor.Patrimonio().serial }}">
-                            </div>
-                            <div class="col-xs-4">
-                                <label class="control-label" for="4">
-                                    Funcionário | Setor
-                                </label>
-                                <select class="js-example-basic-single form-control" name="patrimonio[funcionario_id]" id="1">
-                                    <option value="{{  monitor.Patrimonio().funcionario_id }}"> {{ monitor.Patrimonio().Funcionario().nome }} || {{  monitor.Patrimonio().Funcionario().Setor().nome }}</option>
-                                    {% for funcionario in funcionarios %}
-                                        <option value="{{  funcionario.id }}"> {{ funcionario.nome }} || {{  funcionario.Setor().nome }}</option>
-                                    {% endfor %}
-                                </select>
-                            </div>
-                            <div class="col-xs-3">
-                                <label class="control-label" for="4">
-                                    Local
-                                </label>
-                                <select class="js-example-basic-single form-control" name="patrimonio[local_id]" id="1">
-                                    <option value="{{  monitor.Patrimonio().local_id }}"> {{ monitor.Patrimonio().Local().nome }}</option>
-                                    {% for local in locais %}
-                                        <option value="{{  local.id }}"> {{ local.nome }}</option>
-                                    {% endfor %}
-                                </select>
-                            </div>
-                        </div>
+                            {% include('patrimonio/_inputs_patrimonio.code.twig') %}
                         <br>
                         <input name="id" type="hidden" value="{{  monitor.id }}">
                         <button type="submit" class="btn btn-primary">

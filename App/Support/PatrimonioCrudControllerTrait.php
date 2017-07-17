@@ -2,6 +2,7 @@
 
 namespace App\Support;
 
+use App\Models\Custo;
 use App\Models\Equipamento;
 use App\Models\Funcionario;
 use App\Models\Local;
@@ -42,6 +43,11 @@ trait PatrimonioCrudControllerTrait
         return new Equipamento();
     }
 
+    public function getCustoClass()
+    {
+        return new Custo();
+    }
+
     public function getCategory()
     {
         return $this->categoria;
@@ -50,7 +56,7 @@ trait PatrimonioCrudControllerTrait
     public function duplicate()
     {
         $obj = $this->getModelClass()->find($_GET['id']);
-        echo $this->render("{$this->getNameModel()}.create", ['equipamentos' => $this->getEquipamentoClass()->all(), 'locais' => $this->getLocalClass()->all(), 'funcionarios' => $this->getFuncionarioClass()->all(), 'model' => $obj]);
+        echo $this->render("{$this->getNameModel()}.create", ['equipamentos' => $this->getEquipamentoClass()->all(), 'locais' => $this->getLocalClass()->all(), 'funcionarios' => $this->getFuncionarioClass()->all(), 'model' => $obj, 'custos' => $this->getCustoClass()]);
     }
 
     public function index()
@@ -60,7 +66,7 @@ trait PatrimonioCrudControllerTrait
 
     public function create()
     {
-        echo $this->render("{$this->getNameModel()}.create", ['equipamentos' => $this->getEquipamentoClass()->all(), 'locais' => $this->getLocalClass()->all(), 'funcionarios' => $this->getFuncionarioClass()->all()]);
+        echo $this->render("{$this->getNameModel()}.create", ['equipamentos' => $this->getEquipamentoClass()->all(), 'locais' => $this->getLocalClass()->all(), 'funcionarios' => $this->getFuncionarioClass()->all(), 'custos' => $this->getCustoClass()->all()]);
     }
 
     public function store()
