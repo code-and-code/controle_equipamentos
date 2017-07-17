@@ -9,6 +9,7 @@ $ar["{$prefix}.store"]     = ['route' => "/{$prefix}/gravar",       'controller'
 $ar["{$prefix}.edit"]     = ['route' => "/{$prefix}/editar",       'controller' => $controller, 'method'=>'GET',  'action' => 'edit'   ];
 $ar["{$prefix}.update"]     = ['route' => "/{$prefix}/atualizar",       'controller' => $controller, 'method'=>'POST',  'action' => 'update'   ];
 $ar["{$prefix}.delete"]     = ['route' => "/{$prefix}/deletar",       'controller' => $controller, 'method'=>'GET',  'action' => 'delete'   ];
+$ar["{$prefix}.duplicate"]     = ['route' => "/{$prefix}/duplicar",       'controller' => $controller, 'method'=>'GET',  'action' => 'duplicate'   ];
 
 /*
 $ar['auth.login']     = ['route' => '/auth/login',    'controller' => 'AuthController', 'method'=>'POST', 'action' => 'postLogin'  ];
