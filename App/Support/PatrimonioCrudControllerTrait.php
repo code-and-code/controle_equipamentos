@@ -98,7 +98,7 @@ trait PatrimonioCrudControllerTrait
                     'equipamentos' => $this->getEquipamentoClass()->All(),
                     'locais' => $this->getLocalClass()->all(),
                     'funcionarios' => $this->getFuncionarioClass()->all(),
-                    $this->getNameModel() => $r
+                    'model' => $r,
                 ]);
 
         }catch (\Exception $e)

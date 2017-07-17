@@ -25,5 +25,11 @@ class Patrimonio extends Model {
 
     }
 
+    public function Custo()
+    {
+        return $this->hasOne(Custo::class, 'centro_custo_id');
+    }
+
+
 
 }
