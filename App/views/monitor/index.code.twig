@@ -31,9 +31,9 @@
                                     <td>{{ monitor.Equipamento().modelo }}</td>
                                     <td>{{ monitor.Equipamento().Marca().nome  }}</td>
                                     <td>{{ monitor.tela }}</td>
-                                    <td>{{ monitor.nfe }}</td>
-                                    <td>{{ monitor.data_compra }}</td>
-                                    <td>{{ monitor.valor }}</td>
+                                    <td>{{ monitor.Patrimonio.nfe }}</td>
+                                    <td>{{ monitor.Patrimonio.data_compra }}</td>
+                                    <td>{{ monitor.Patrimonio.valor }}</td>
                                     <td>
                                         <a href="/monitor/duplicar?id={{ monitor.id }}" class="fa fa-share-alt text-info"></a>
                                         <a href="/monitor/editar?id={{ monitor.id }}" class="fa fa-edit text-info"></a>
