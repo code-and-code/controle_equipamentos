@@ -17,6 +17,7 @@
                                 <th>Modelo</th>
                                 <th>Marca</th>
                                 <th>Tela</th>
+                                <th>Local</th>
                                 <th>NFe</th>
                                 <th>Data Compra</th>
                                 <th>Valor</th>
@@ -31,6 +32,7 @@
                                     <td>{{ monitor.Equipamento().modelo }}</td>
                                     <td>{{ monitor.Equipamento().Marca().nome  }}</td>
                                     <td>{{ monitor.tela }}</td>
+                                    <td>{{ monitor.Patrimonio.Local.nome }}</td>
                                     <td>{{ monitor.Patrimonio.nfe }}</td>
                                     <td>{{ monitor.Patrimonio.data_compra }}</td>
                                     <td>{{ monitor.Patrimonio.valor }}</td>
