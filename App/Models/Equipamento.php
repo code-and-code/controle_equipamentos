@@ -17,4 +17,9 @@ class Equipamento extends Model {
     {
         return $this->hasOne(Categoria::class);
     }
+
+    public function Estoque()
+    {
+        return $this->where('qtd','>' ,0 )->get();
+    }
 }

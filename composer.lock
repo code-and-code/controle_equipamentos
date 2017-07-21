@@ -4,6 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+    "hash": "061dee60e9d2b988dead7ac4c3baaf20",
     "content-hash": "5665e2381c23a1bd18df9c0fc66dc934",
     "packages": [
         {
@@ -12,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/code-and-code/micro-fwk.git",
-                "reference": "1b24574c1b707bc1456aa1a8d55732df63ce90b6"
+                "reference": "032b4ef838ce89cccddd6f75e7fbfd28349dc22c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/code-and-code/micro-fwk/zipball/1b24574c1b707bc1456aa1a8d55732df63ce90b6",
-                "reference": "1b24574c1b707bc1456aa1a8d55732df63ce90b6",
+                "url": "https://api.github.com/repos/code-and-code/micro-fwk/zipball/032b4ef838ce89cccddd6f75e7fbfd28349dc22c",
+                "reference": "032b4ef838ce89cccddd6f75e7fbfd28349dc22c",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +46,7 @@
                 "projecto inical",
                 "start"
             ],
-            "time": "2017-07-17 18:58:26"
+            "time": "2017-07-11 19:53:48"
         },
         {
             "name": "codeguy/upload",
@@ -92,7 +93,7 @@
                 "upload",
                 "validation"
             ],
-            "time": "2013-07-07T17:01:41+00:00"
+            "time": "2013-07-07 17:01:41"
         },
         {
             "name": "desarrolla2/cache",
@@ -147,7 +148,7 @@
                 "mysql",
                 "redis"
             ],
-            "time": "2017-01-18T12:58:33+00:00"
+            "time": "2017-01-18 12:58:33"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -223,7 +224,7 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2017-03-15T19:32:56+00:00"
+            "time": "2017-03-15 19:32:56"
         },
         {
             "name": "plasticbrain/php-flash-messages",
@@ -265,7 +266,7 @@
                 "messages",
                 "session"
             ],
-            "time": "2016-04-01T08:39:38+00:00"
+            "time": "2016-04-01 08:39:38"
         },
         {
             "name": "twig/twig",
@@ -486,22 +487,22 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "3.2.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "46f7e8bb075036c92695b15a1ddb6971c751e585"
+                "reference": "8331b5efe816ae05461b7ca1e721c01b46bafb3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/46f7e8bb075036c92695b15a1ddb6971c751e585",
-                "reference": "46f7e8bb075036c92695b15a1ddb6971c751e585",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/8331b5efe816ae05461b7ca1e721c01b46bafb3e",
+                "reference": "8331b5efe816ae05461b7ca1e721c01b46bafb3e",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5",
                 "phpdocumentor/reflection-common": "^1.0@dev",
-                "phpdocumentor/type-resolver": "^0.4.0",
+                "phpdocumentor/type-resolver": "^0.2.0",
                 "webmozart/assert": "^1.0"
             },
             "require-dev": {
@@ -527,24 +528,24 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2017-07-15T11:38:20+00:00"
+            "time": "2016-09-30 07:12:33"
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "0.4.0",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "9c977708995954784726e25d0cd1dddf4e65b0f7"
+                "reference": "e224fb2ea2fba6d3ad6fdaef91cd09a172155ccb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/9c977708995954784726e25d0cd1dddf4e65b0f7",
-                "reference": "9c977708995954784726e25d0cd1dddf4e65b0f7",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/e224fb2ea2fba6d3ad6fdaef91cd09a172155ccb",
+                "reference": "e224fb2ea2fba6d3ad6fdaef91cd09a172155ccb",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5 || ^7.0",
+                "php": ">=5.5",
                 "phpdocumentor/reflection-common": "^1.0"
             },
             "require-dev": {
@@ -574,7 +575,7 @@
                     "email": "me@mikevanriel.com"
                 }
             ],
-            "time": "2017-07-14T14:27:02+00:00"
+            "time": "2016-11-25 06:54:22"
         },
         {
             "name": "phpspec/prophecy",
@@ -788,7 +789,7 @@
             "keywords": [
                 "template"
             ],
-            "time": "2015-06-21T13:50:34+00:00"
+            "time": "2015-06-21 13:50:34"
         },
         {
             "name": "phpunit/php-timer",

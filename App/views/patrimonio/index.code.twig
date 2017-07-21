@@ -12,8 +12,8 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Patrimonio</th>
+                                <th>Patr.</th>
+                                <th>Tipo</th>
                                 <th>Equipamento</th>
                                 <th>Serial</th>
                                 <th>Funcionario</th>
@@ -24,13 +24,13 @@
                         <tbody>
                         {% for patrimonio in results %}
                             <tr>
-                                <td>{{ patrimonio.id }}</td>
                                 <td>{{ patrimonio.num_patrimonial }}</td>
-                                <td>{{ patrimonio.Item.Equipamento.Categoria.nome }} || {{ patrimonio.Item.Equipamento.nome }}</td>
+                                <td>{{ patrimonio.Item.Equipamento.Categoria.nome }}</td>
+                                <td>{{ patrimonio.Item.Equipamento.nome }} {{ patrimonio.Item.Equipamento.modelo }}</td>
                                 <td>{{ patrimonio.serial }}</td>
                                 <td>{{ patrimonio.Funcionario().nome }} || {{ patrimonio.Funcionario().Setor().nome }}</td>
                                 <td>{{ patrimonio.Local().nome }}</td>
-                                <td>R$ {{ patrimonio.Item.valor }}</td>
+                                <td>R$ {{ patrimonio.valor }}</td>
                             </tr>
                         {% endfor %}
                         </tbody>

@@ -2,9 +2,10 @@
 
 namespace App;
 
+use Cac\Provider\ServiceProvider;
 use Cac\Route\Router;
 
-class AuthProvider
+class AuthProvider implements ServiceProvider
 {
     protected $namespace  = 'App\Controllers';
 
@@ -13,7 +14,7 @@ class AuthProvider
         $this->mapRoutes();
     }
 
-    protected function mapRoutes()
+    public function mapRoutes()
     {
         Router::get(['route' => '/login', 'namespace' => $this->namespace,'controller' => '\Auth\AuthController','action' => 'getLogin']);
     }

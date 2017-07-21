@@ -16,6 +16,7 @@
                                 <th>Nome</th>
                                 <th>Modelo</th>
                                 <th>Marca</th>
+                                <th>Quatidade</th>
                                 <th>#</th>
                             </tr>
                             </thead>
@@ -26,6 +27,7 @@
                                     <td>{{ equipamento.nome }}</td>
                                     <td>{{ equipamento.modelo }}</td>
                                     <td>{{ equipamento.Marca.nome }}</td>
+                                    <td>{{ equipamento.qtd }}</td>
                                     <td>
                                         <a href="/equipamento/editar?id={{  equipamento.id }}"  class="fa fa-edit text-info"    ></a>
                                         <a href="/equipamento/deletar?id={{ equipamento.id }}" class="fa fa-trash text-danger" ></a>

@@ -38,9 +38,10 @@ trait PatrimonioCrudControllerTrait
         return new Funcionario();
     }
 
-    public function getEquipamentoClass()
+    public function getEstoque()
     {
-        return new Equipamento();
+        $equipamento = new Equipamento();
+        return $equipamento->Estoque();
     }
 
     public function getCustoClass()
@@ -56,7 +57,7 @@ trait PatrimonioCrudControllerTrait
     public function duplicate()
     {
         $obj = $this->getModelClass()->find($_GET['id']);
-        echo $this->render("{$this->getNameModel()}.create", ['equipamentos' => $this->getEquipamentoClass()->all(), 'locais' => $this->getLocalClass()->all(), 'funcionarios' => $this->getFuncionarioClass()->all(), 'model' => $obj, 'custos' => $this->getCustoClass()->all()]);
+        echo $this->render("{$this->getNameModel()}.create", ['equipamentos' => $this->getEstoque(), 'locais' => $this->getLocalClass()->all(), 'funcionarios' => $this->getFuncionarioClass()->all(), 'model' => $obj, 'custos' => $this->getCustoClass()->all()]);
     }
 
     public function index()
@@ -66,7 +67,7 @@ trait PatrimonioCrudControllerTrait
 
     public function create()
     {
-        echo $this->render("{$this->getNameModel()}.create", ['equipamentos' => $this->getEquipamentoClass()->all(), 'locais' => $this->getLocalClass()->all(), 'funcionarios' => $this->getFuncionarioClass()->all(), 'custos' => $this->getCustoClass()->all()]);
+        echo $this->render("{$this->getNameModel()}.create", ['equipamentos' => $this->getEstoque(), 'locais' => $this->getLocalClass()->all(), 'funcionarios' => $this->getFuncionarioClass()->all(), 'custos' => $this->getCustoClass()->all()]);
     }
 
     public function store()
@@ -95,7 +96,7 @@ trait PatrimonioCrudControllerTrait
             $r = $this->getModelClass()->find($_GET['id']);
             echo $this->render("{$this->getNameModel()}.edit",
                 [
-                    'equipamentos' => $this->getEquipamentoClass()->All(),
+                    'equipamentos' => $this->getEstoque(),
                     'locais' => $this->getLocalClass()->all(),
                     'funcionarios' => $this->getFuncionarioClass()->all(),
                     'model' => $r,

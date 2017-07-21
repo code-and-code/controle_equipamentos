@@ -1,7 +1,6 @@
 <?php
 namespace App\Controllers\Auth;
 
-
 class AuthController extends \Cac\Auth\Auth
 {
     public function __construct()
@@ -11,7 +10,7 @@ class AuthController extends \Cac\Auth\Auth
 
     public function getLogin()
     {
-       echo $this->render('auth.login');
+        echo $this->render('auth.login');
     }
 
     public function getRegister()
