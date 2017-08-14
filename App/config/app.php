@@ -5,7 +5,7 @@ return [
     'public'   => false,
     'timezone' => 'UTC',
     'url'      => 'http://127.0.0.1:8080',
-    'auth'     =>  true,
+    'auth'     =>  false,
 
     'database' => [
                     'mysql' =>  [ 'host'     => '127.0.0.1',//mysql873.umbler.com:41890
