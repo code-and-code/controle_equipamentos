@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "061dee60e9d2b988dead7ac4c3baaf20",
-    "content-hash": "5665e2381c23a1bd18df9c0fc66dc934",
+    "hash": "76d4c072fdca2effd0a5ef012543dacd",
+    "content-hash": "4b8dab29a0ee6ecc1b421192f3fd5e77",
     "packages": [
         {
             "name": "codeandcode/micro-fwk",
@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/code-and-code/micro-fwk.git",
-                "reference": "032b4ef838ce89cccddd6f75e7fbfd28349dc22c"
+                "reference": "af10cfdf5eed294ef16a16197aa6d65a917c4b8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/code-and-code/micro-fwk/zipball/032b4ef838ce89cccddd6f75e7fbfd28349dc22c",
-                "reference": "032b4ef838ce89cccddd6f75e7fbfd28349dc22c",
+                "url": "https://api.github.com/repos/code-and-code/micro-fwk/zipball/af10cfdf5eed294ef16a16197aa6d65a917c4b8d",
+                "reference": "af10cfdf5eed294ef16a16197aa6d65a917c4b8d",
                 "shasum": ""
             },
             "require": {
@@ -29,15 +29,73 @@
                 "plasticbrain/php-flash-messages": "^1.0",
                 "twig/twig": "~1.0"
             },
-            "type": "project",
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cac\\": "src/"
+                },
+                "files": [
+                    "src/Helpers/Helper.php"
+                ]
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
-                    "name": "CodeAndCode",
+                    "name": "Code&Code",
                     "email": "contato@codeandcode.com.br"
+                },
+                {
+                    "name": "Angelo Biscola",
+                    "email": "angelo@codeandcode.com.br"
+                }
+            ],
+            "homepage": "https://github.com/code-and-code/micro-fwk",
+            "keywords": [
+                "framework",
+                "micro-fwk",
+                "start"
+            ],
+            "time": "2017-08-08 19:19:33"
+        },
+        {
+            "name": "codeandcode/simplebase-start",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/code-and-code/simplebase-start.git",
+                "reference": "143cdfe6c370ea652057dd87cc03474d9bb04194"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/code-and-code/simplebase-start/zipball/143cdfe6c370ea652057dd87cc03474d9bb04194",
+                "reference": "143cdfe6c370ea652057dd87cc03474d9bb04194",
+                "shasum": ""
+            },
+            "require": {
+                "codeandcode/micro-fwk": "dev-master",
+                "php": ">=5.4"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Cac\\SimpleBase\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Code&Code",
+                    "email": "contato@codeandcode.com.br"
+                },
+                {
+                    "name": "Angelo Biscola",
+                    "email": "angelo@codeandcode.com.br"
                 }
             ],
             "keywords": [
@@ -46,7 +104,7 @@
                 "projecto inical",
                 "start"
             ],
-            "time": "2017-07-11 19:53:48"
+            "time": "2017-08-10 13:25:30"
         },
         {
             "name": "codeguy/upload",
@@ -152,19 +210,20 @@
         },
         {
             "name": "phpmailer/phpmailer",
-            "version": "v5.2.23",
+            "version": "v5.2.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "7115df4a6f76281109ebe352900c42403b728bb4"
+                "reference": "22d04c6a58145a244696f3f254c1875aa653b26a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/7115df4a6f76281109ebe352900c42403b728bb4",
-                "reference": "7115df4a6f76281109ebe352900c42403b728bb4",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/22d04c6a58145a244696f3f254c1875aa653b26a",
+                "reference": "22d04c6a58145a244696f3f254c1875aa653b26a",
                 "shasum": ""
             },
             "require": {
+                "ext-ctype": "*",
                 "php": ">=5.0.0"
             },
             "require-dev": {
@@ -224,7 +283,7 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2017-03-15 19:32:56"
+            "time": "2017-07-26 21:00:20"
         },
         {
             "name": "plasticbrain/php-flash-messages",
@@ -274,12 +333,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "f1703ea411d642f5b26c81553063a3154325ed80"
+                "reference": "73ab3a1215a9e13392ae120236824a6ea5ef507a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/f1703ea411d642f5b26c81553063a3154325ed80",
-                "reference": "f1703ea411d642f5b26c81553063a3154325ed80",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/73ab3a1215a9e13392ae120236824a6ea5ef507a",
+                "reference": "73ab3a1215a9e13392ae120236824a6ea5ef507a",
                 "shasum": ""
             },
             "require": {
@@ -331,22 +390,22 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-07-04 13:20:04"
+            "time": "2017-08-02 18:11:46"
         }
     ],
     "packages-dev": [
         {
             "name": "doctrine/instantiator",
-            "version": "dev-master",
+            "version": "1.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "5acd2bd8c2b600ad5cc4c9180ebf0a930604d6a5"
+                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/5acd2bd8c2b600ad5cc4c9180ebf0a930604d6a5",
-                "reference": "5acd2bd8c2b600ad5cc4c9180ebf0a930604d6a5",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/8e884e78f9f0eb1329e445619e04456e64d8051d",
+                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d",
                 "shasum": ""
             },
             "require": {
@@ -387,7 +446,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2017-02-16 16:15:51"
+            "time": "2015-06-14 21:17:01"
         },
         {
             "name": "myclabs/deep-copy",
@@ -487,22 +546,22 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "3.1.1",
+            "version": "3.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "8331b5efe816ae05461b7ca1e721c01b46bafb3e"
+                "reference": "4aada1f93c72c35e22fb1383b47fee43b8f1d157"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/8331b5efe816ae05461b7ca1e721c01b46bafb3e",
-                "reference": "8331b5efe816ae05461b7ca1e721c01b46bafb3e",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/4aada1f93c72c35e22fb1383b47fee43b8f1d157",
+                "reference": "4aada1f93c72c35e22fb1383b47fee43b8f1d157",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5",
                 "phpdocumentor/reflection-common": "^1.0@dev",
-                "phpdocumentor/type-resolver": "^0.2.0",
+                "phpdocumentor/type-resolver": "^0.3.0",
                 "webmozart/assert": "^1.0"
             },
             "require-dev": {
@@ -528,24 +587,24 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2016-09-30 07:12:33"
+            "time": "2017-08-08 06:39:58"
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "0.2.1",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "e224fb2ea2fba6d3ad6fdaef91cd09a172155ccb"
+                "reference": "fb3933512008d8162b3cdf9e18dba9309b7c3773"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/e224fb2ea2fba6d3ad6fdaef91cd09a172155ccb",
-                "reference": "e224fb2ea2fba6d3ad6fdaef91cd09a172155ccb",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/fb3933512008d8162b3cdf9e18dba9309b7c3773",
+                "reference": "fb3933512008d8162b3cdf9e18dba9309b7c3773",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5",
+                "php": "^5.5 || ^7.0",
                 "phpdocumentor/reflection-common": "^1.0"
             },
             "require-dev": {
@@ -575,7 +634,7 @@
                     "email": "me@mikevanriel.com"
                 }
             ],
-            "time": "2016-11-25 06:54:22"
+            "time": "2017-06-03 08:32:36"
         },
         {
             "name": "phpspec/prophecy",
@@ -583,12 +642,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "79db5dd907ee977039f77ac8471a739497463429"
+                "reference": "420d44c5534bbf269e85e6213446e8284d53c6c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/79db5dd907ee977039f77ac8471a739497463429",
-                "reference": "79db5dd907ee977039f77ac8471a739497463429",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/420d44c5534bbf269e85e6213446e8284d53c6c7",
+                "reference": "420d44c5534bbf269e85e6213446e8284d53c6c7",
                 "shasum": ""
             },
             "require": {
@@ -638,7 +697,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2017-05-31 16:22:32"
+            "time": "2017-07-19 07:44:25"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -846,20 +905,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "9ddb181faa4a3841fe131c357fd01de75cbb4da9"
+                "reference": "8c0bca4db90bb0a0b400ad8e90fee3210081701d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/9ddb181faa4a3841fe131c357fd01de75cbb4da9",
-                "reference": "9ddb181faa4a3841fe131c357fd01de75cbb4da9",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/8c0bca4db90bb0a0b400ad8e90fee3210081701d",
+                "reference": "8c0bca4db90bb0a0b400ad8e90fee3210081701d",
                 "shasum": ""
             },
             "require": {
                 "ext-tokenizer": "*",
-                "php": "^5.6 || ^7.0"
+                "php": "^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.7 || ^6.0"
+                "phpunit/phpunit": "^6.2.4"
             },
             "type": "library",
             "extra": {
@@ -887,7 +946,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2017-03-07 07:36:57"
+            "time": "2017-08-03 14:21:49"
         },
         {
             "name": "phpunit/phpunit",
@@ -895,12 +954,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c0c61c97be37e1c77ab61ad73448e9208c05aade"
+                "reference": "552d65f3dd5ff50cda3a2480b9037d0a803d731e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c0c61c97be37e1c77ab61ad73448e9208c05aade",
-                "reference": "c0c61c97be37e1c77ab61ad73448e9208c05aade",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/552d65f3dd5ff50cda3a2480b9037d0a803d731e",
+                "reference": "552d65f3dd5ff50cda3a2480b9037d0a803d731e",
                 "shasum": ""
             },
             "require": {
@@ -969,7 +1028,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-06-23 12:45:27"
+            "time": "2017-08-10 16:53:18"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1549,16 +1608,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "519fb0872bb41e0f0c221ead8945eb12197bb034"
+                "reference": "1395ddba6f65bf46cdf1d80d59223cbab8ff3ccc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/519fb0872bb41e0f0c221ead8945eb12197bb034",
-                "reference": "519fb0872bb41e0f0c221ead8945eb12197bb034",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/1395ddba6f65bf46cdf1d80d59223cbab8ff3ccc",
+                "reference": "1395ddba6f65bf46cdf1d80d59223cbab8ff3ccc",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9"
+                "php": "^5.5.9|>=7.0.8"
             },
             "require-dev": {
                 "symfony/console": "~2.8|~3.0|~4.0"
@@ -1596,7 +1655,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-07-03 10:20:17"
+            "time": "2017-08-04 13:29:48"
         },
         {
             "name": "webmozart/assert",

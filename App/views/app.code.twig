@@ -40,26 +40,6 @@
                 <li><a href="/custo">Centro de custo</a></li>
             {% endif %}
 
-            <li class="">
-                <div class="dropdown navbar-brand">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                        <span class="fa fa-fw fa-navicon"></span>
-                    </button>
-
-                    <ul class="dropdown-menu">
-                        {% if guest() == true %}
-
-                            {{ include(view('auth._infologin')) }}
-
-                        {% else %}
-
-                            <li>
-                                <a href="/login/entrar"> Login <i class="fa fa-fw fa-user pull-right"></i></a>
-                            </li>
-
-                        {% endif %}
-                    </ul>
-                </div>
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right"></ul>

@@ -2,13 +2,17 @@
 
 return [
     
-    'public'    => false,
+    'public'   => false,
     'timezone' => 'UTC',
+    'url'      => 'http://127.0.0.1:8080',
+    'auth'     =>  true,
 
-    'database' => [ 'host'     => '127.0.0.1',//mysql873.umbler.com:41890
-        'dbname'   => 'equipamento',
-        'username' => 'root',
-        'password' =>  '123456'
+    'database' => [
+                    'mysql' =>  [ 'host'     => '127.0.0.1',//mysql873.umbler.com:41890
+                    'dbname'   => 'equipamento',
+                    'username' => 'root',
+                    'password' =>  '123456'
+                    ]
     ],
 
     'layout' => [
@@ -33,7 +37,6 @@ return [
 
     'providers'=> [
                     'App\StartProvider',
-                    'App\AuthProvider',
     ]
 ];
 

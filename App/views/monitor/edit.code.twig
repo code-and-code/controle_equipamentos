@@ -16,7 +16,7 @@
                             <select class="js-example-basic-single form-control" name="monitor[equipamento_id]" id="1">
                                 <option value="{{  model.Equipamento().id }}"> {{ model.Equipamento.nome }} || {{ model.Equipamento.modelo }}</option>
                                 {% for equipamento in equipamentos %}
-                                    <option value="{{  equipamento.id }}"> {{ equipamento.nome }} || {{ equipamento.modelo }}</option>
+                                    <option value="{{  equipamento.id }}"> {{ equipamento.nome }} || {{ equipamento.modelo }} || Qtd {{ equipamento.qtd }}</option>
                                 {% endfor %}
                             </select>
                         </div>

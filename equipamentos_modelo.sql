@@ -106,6 +106,62 @@ CREATE TABLE `equipamentos` (
 
 
 
+# Dump of table entradas
+# ------------------------------------------------------------
+
+CREATE TABLE `entradas` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `nf` int(255) DEFAULT NULL,
+  `qtd` int(11) DEFAULT '0',
+  `data_entrada` datetime DEFAULT NULL,
+  `equipamento_id` int(11) unsigned NOT NULL,
+  `centro_custo_id` int(11) unsigned NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DELIMITER ;;
+/*!50003 SET SESSION SQL_MODE="NO_AUTO_VALUE_ON_ZERO" */;;
+/*!50003 CREATE */ /*!50017 DEFINER=`root`@`localhost` */ /*!50003 TRIGGER `insert_entrada` AFTER INSERT ON `entradas` FOR EACH ROW BEGIN
+	    	CALL atualiza_equipamento (new.equipamento_id, new.qtd);
+		END */;;
+/*!50003 SET SESSION SQL_MODE="NO_AUTO_VALUE_ON_ZERO" */;;
+/*!50003 CREATE */ /*!50017 DEFINER=`root`@`localhost` */ /*!50003 TRIGGER `delete_entrada` BEFORE DELETE ON `entradas` FOR EACH ROW BEGIN
+			CALL atualiza_equipamento (OLD.equipamento_id, -OLD.qtd);
+   	END */;;
+DELIMITER ;
+/*!50003 SET SESSION SQL_MODE=@OLD_SQL_MODE */;
+
+
+# Dump of table saidas
+# ------------------------------------------------------------
+
+CREATE TABLE `saidas` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `qtd` int(11) DEFAULT '0',
+  `data_saida` datetime DEFAULT NULL,
+  `equipamento_id` int(11) unsigned NOT NULL,
+  `funcionario_id` int(11) unsigned NOT NULL,
+  `setor_id` int(11) unsigned NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DELIMITER ;;
+/*!50003 SET SESSION SQL_MODE="NO_AUTO_VALUE_ON_ZERO" */;;
+/*!50003 CREATE */ /*!50017 DEFINER=`root`@`localhost` */ /*!50003 TRIGGER `insert_saida` AFTER INSERT ON `saidas` FOR EACH ROW BEGIN
+	    	CALL atualiza_equipamento (new.equipamento_id, -new.qtd);
+		END */;;
+/*!50003 SET SESSION SQL_MODE="NO_AUTO_VALUE_ON_ZERO" */;;
+/*!50003 CREATE */ /*!50017 DEFINER=`root`@`localhost` */ /*!50003 TRIGGER `delete_saida` BEFORE DELETE ON `saidas` FOR EACH ROW BEGIN
+			CALL atualiza_equipamento (OLD.equipamento_id, OLD.qtd);
+   	END */;;
+DELIMITER ;
+
+
+
 # Dump of table funcionarios
 # ------------------------------------------------------------
 

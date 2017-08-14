@@ -1,8 +1,6 @@
 <?php
 namespace App\Models;
 
-use Cac\Model\Model;
-
 class Custo extends Model {
 
     protected $table      = "centro_custo";

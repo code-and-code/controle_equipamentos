@@ -2,7 +2,6 @@
 namespace App\Models;
 
 use App\Support\PatrimonioTrait;
-use Cac\Model\Model;
 
 class Computador extends Model {
 
