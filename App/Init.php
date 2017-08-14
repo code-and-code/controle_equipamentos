@@ -27,6 +27,7 @@ class Init extends Bootstrap
         require 'routes/computador.php';
         require 'routes/monitor.php';
         require 'routes/patrimonio.php';
+        require 'routes/entrada.php';
 
         $this->setRoutes($ar);
     }

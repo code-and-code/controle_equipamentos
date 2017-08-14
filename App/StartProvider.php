@@ -16,6 +16,6 @@ class StartProvider implements Provider
 
     public function mapRoutes()
     {
-        Router::get(['route' => '/auth', 'namespace' => $this->namespace,'controller' => '\Auth\AuthController','action' => 'getLogin']);
+
     }
 }
