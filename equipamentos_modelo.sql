@@ -142,7 +142,7 @@ CREATE TABLE `saidas` (
   `qtd` int(11) DEFAULT '0',
   `data_saida` datetime DEFAULT NULL,
   `equipamento_id` int(11) unsigned NOT NULL,
-  `funcionario_id` int(11) unsigned NOT NULL,
+  `funcionario_id` int(11) DEFAULT NULL,
   `setor_id` int(11) unsigned NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "76d4c072fdca2effd0a5ef012543dacd",
+    "hash": "8aea3108815df0c9fc2a15268ea13818",
     "content-hash": "4b8dab29a0ee6ecc1b421192f3fd5e77",
     "packages": [
         {
@@ -62,16 +62,16 @@
         },
         {
             "name": "codeandcode/simplebase-start",
-            "version": "1.0",
+            "version": "1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/code-and-code/simplebase-start.git",
-                "reference": "143cdfe6c370ea652057dd87cc03474d9bb04194"
+                "reference": "621b96e6848e28b9627679d17bee986b927324f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/code-and-code/simplebase-start/zipball/143cdfe6c370ea652057dd87cc03474d9bb04194",
-                "reference": "143cdfe6c370ea652057dd87cc03474d9bb04194",
+                "url": "https://api.github.com/repos/code-and-code/simplebase-start/zipball/621b96e6848e28b9627679d17bee986b927324f2",
+                "reference": "621b96e6848e28b9627679d17bee986b927324f2",
                 "shasum": ""
             },
             "require": {
@@ -104,7 +104,7 @@
                 "projecto inical",
                 "start"
             ],
-            "time": "2017-08-10 13:25:30"
+            "time": "2017-08-15 14:47:20"
         },
         {
             "name": "codeguy/upload",

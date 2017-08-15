@@ -24,7 +24,7 @@ return [
     ],
 
     'file'  => [
-        'folder' => 'images'
+        'folder' => '../storage/nf'
     ],
 
     'cache'  => [ 'active' => true,

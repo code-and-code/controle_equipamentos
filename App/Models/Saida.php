@@ -4,12 +4,18 @@ namespace App\Models;
 
 class Saida extends Model {
 
-    protected $table      = "entradas";
-    public    $requested  = ['qtd','setor_id'];
+    protected $table      = "saidas";
+    public    $requested  = ['qtd','setor_id','equipamento_id'];
+
+
+    public function Equipamento()
+    {
+        return $this->hasOne(Equipamento::class);
+    }
 
     public function Setor()
     {
-        return $this->Setor(Equipamento::class);
+        return $this->hasOne(Setor::class);
     }
 
     public function Funcionario()

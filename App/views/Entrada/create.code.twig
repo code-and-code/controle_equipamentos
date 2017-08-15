@@ -1,0 +1,65 @@
+{% extends view('app') %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Entrada | Criar</h3>
+                </div>
+                <div class="panel-body">
+                    <form role="form" action="/entrada/gravar" method="post">
+                        <div class="form-group">
+                            <label class="control-label" for="1">
+                                Equipamento
+                            </label>
+                            <select class="js-example-basic-single form-control" name="equipamento_id" id="1" >
+                                {% for equipamento in equipamentos %}
+                                    <option value="{{  equipamento.id }}"> {{ equipamento.nome }} || {{ equipamento.modelo }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="9">
+                                NFe
+                            </label>
+                            <input required class="form-control" id="9" placeholder="" name="nf" type="text" value="">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <label class="control-label" for="4">
+                                    Data Compra
+                                </label>
+                                <input required class="form-control" id="11" placeholder="" name="data_entrada" type="date" value="" >
+                            </div>
+                            <div class="col-xs-4">
+                                <label class="control-label" for="4">
+                                    Qtd
+                                </label>
+                                <input required class="form-control" id="10" placeholder="" name="qtd" type="text" value="{{ model.Patrimonio.valor }}">
+                            </div>
+                            <div class="col-xs-4">
+                                <label class="control-label" for="4">
+                                    Centro De Custo
+                                </label>
+                                <select class="js-example-basic-single form-control" name="centro_custo_id" id="1" >
+                                    {% for custo in custos %}
+                                        <option value="{{  custo.id }}"> {{ custo.nome }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary">
+                            Cadastrar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{%  endblock %}

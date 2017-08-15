@@ -1,0 +1,45 @@
+{% extends view('app') %}
+
+{% block content %}
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Saidas <a href="/saida/novo" class="fa fa-plus pull-right"></a></h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Qtd</th>
+                                <th>Saida</th>
+                                <th>Setor</th>
+                                <th>Funcionario</th>
+                                <th>Equipamento</th>
+                                <th>#</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for  saida in results %}
+                                <tr>
+                                    <td>{{ saida.id }}</td>
+                                    <td>{{ saida.qtd }}</td>
+                                    <td>{{ saida.data_saida }}</td>
+                                    <td>{{ saida.Setor.nome }}</td>
+                                    <td>{{ saida.Funcionario.nome }}</td>
+                                    <td>{{ saida.Equipamento.nome }} - {{ saida.Equipamento.modelo }} - {{ saida.Equipamento.Marca.nome }}</td>
+                                    <td>
+                                        <a href="saida/deletar?id={{ saida.id }}" class="fa fa-trash text-danger" ></a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
