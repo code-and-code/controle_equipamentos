@@ -2,9 +2,9 @@
 namespace App\Controllers;
 
 use App\Models\Computador;
+use App\Models\Serial;
 use App\Support\PatrimonioCrudControllerTrait;
 use Cac\Controller\Action;
-use Cac\Support\Validation;
 
 class ComputadorController extends Action
 {
@@ -17,5 +17,13 @@ class ComputadorController extends Action
     {
         $this->model = new Computador();
         $this->categoria = 'computador';
+    }
+
+    public function addLicenses()
+    {
+        $computador = $this->model->find($_GET['id']);
+        $serial    = new Serial();
+        $seriais   = $serial->whereIsNull('computador_id')->get();
+        echo $this->render("computador.licenses", ['seriais' => $seriais,'computador' => $computador]);
     }
 }

@@ -21,9 +21,19 @@ class SerialController extends Action
         echo $this->render('serial.create', ['licenca_id' => $_GET['id']]);
     }
 
-    public function findByLicenca()
+    public function addComputador()
     {
-        $serial = $this->model->where('licenca_id', '=' ,$_GET['id'])->get();
-        echo $this->render('serial.index', ['results' => $serial,'licenca' => $_GET['id']]);
+        $serial = $this->model->find($_POST['serial']);
+        $serial->computador_id = $_POST['computador'];
+        $serial->save();
+        return back('Gravado','success');
+    }
+
+    public function removeComputador()
+    {
+        $serial = $this->model->find($_GET['id']);
+        $serial->computador_id = NULL;
+        $serial->save();
+        return back('Excluido','success');
     }
 }

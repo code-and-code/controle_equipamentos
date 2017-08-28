@@ -57,11 +57,12 @@
                         </div>
 
                             {% include('patrimonio/_inputs_patrimonio.code.twig') %}
-
-
                         <button type="submit" class="btn btn-primary">
-                            Cadastrar
+                            Gravar
                         </button>
+                        <a href="/computador/licenca?id={{ objeto.id }}" class="btn btn-warning">
+                            Nova Licença
+                        </a>
                     </form>
                 </div>
             </div>

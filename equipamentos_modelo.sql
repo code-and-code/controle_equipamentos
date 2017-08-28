@@ -338,7 +338,7 @@ CREATE TABLE `serial` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `numero` varchar(255) NOT NULL,
   `data_vencimento` datetime DEFAULT NULL,
-  `computator_id` int(11) DEFAULT NULL,
+  `computador_id` int(11) DEFAULT NULL,
   `licenca_id` int(11) unsigned NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
