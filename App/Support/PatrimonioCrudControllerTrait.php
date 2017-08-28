@@ -111,6 +111,7 @@ trait PatrimonioCrudControllerTrait
     public function update()
     {
         try{
+            dd($_POST);
             Validation::requireModel($this->getModelClass(),$_POST[$this->getCategory()]);
             Validation::requireModel($this->getPatrimonioClass(), $_POST['patrimonio']);
 

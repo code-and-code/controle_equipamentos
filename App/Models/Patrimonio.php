@@ -6,7 +6,7 @@ namespace App\Models;
 class Patrimonio extends Model {
 
     protected $table      = "patrimonios";
-    public    $requested    = ['num_patrimonial', 'funcionario_id', 'local_id'];
+    public    $requested    = ['num_patrimonial', 'local_id', 'valor', 'data_compra'];
 
     public function Local()
     {
