@@ -31,7 +31,16 @@ CREATE TABLE `categorias` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+# Dump of table nfes
+# ------------------------------------------------------------
 
+CREATE TABLE `nfes` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`nfe` INT(11) NOT NULL,
+	`created_at` TIMESTAMP NULL DEFAULT NULL,
+	`updated_at` TIMESTAMP NULL DEFAULT NULL,
+	PRIMARY KEY (`id`)
+)ENGINE=InnoDB;
 
 # Dump of table centro_custo
 # ------------------------------------------------------------

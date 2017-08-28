@@ -2,7 +2,7 @@
     <label class="control-label" for="9">
         NFe
     </label>
-    <input required class="form-control" id="9" placeholder="" name="patrimonio[nfe]" type="text" value="{{ objeto.Patrimonio.nfe }}">
+    <input required class="form-control" id="9" placeholder="" name="patrimonio[nfe]" type="text" value="{{ model.Patrimonio.nfe }}">
 </div>
 
 <div class="row">
@@ -10,21 +10,21 @@
         <label class="control-label" for="4">
             Data Compra
         </label>
-        <input required class="form-control" id="11" placeholder="" name="patrimonio[data_compra]" type="date" value="{{ objeto.Patrimonio.data_compra }}" >
+        <input required class="form-control" id="11" placeholder="" name="patrimonio[data_compra]" type="date" value="{{ model.Patrimonio.data_compra }}" >
     </div>
     <div class="col-xs-4">
         <label class="control-label" for="4">
             Valor
         </label>
-        <input required class="form-control" id="10" placeholder="" name="patrimonio[valor]" type="text" value="{{ objeto.Patrimonio.valor }}">
+        <input required class="form-control" id="10" placeholder="" name="patrimonio[valor]" type="text" value="{{ model.Patrimonio.valor }}">
     </div>
     <div class="col-xs-4">
         <label class="control-label" for="4">
             Centro De Custo
         </label>
         <select class="js-example-basic-single form-control" name="patrimonio[centro_custo_id]" id="1" >
-            {% if objeto %}
-                <option value="{{  objeto.Patrimonio.centro_custo_id }}"> {{ objeto.Patrimonio.Custo.nome }}</option>
+            {% if model %}
+                <option value="{{  model.Patrimonio.centro_custo_id }}"> {{ model.Patrimonio.Custo.nome }}</option>
             {% endif %}
             {% for custo in custos %}
                 <option value="{{  custo.id }}"> {{ custo.nome }}</option>
@@ -38,13 +38,13 @@
         <label class="control-label" for="4">
             Num Patrimônio
         </label>
-        <input required type="text" class="form-control" name="patrimonio[num_patrimonial]" value="{{ objeto.Patrimonio.num_patrimonial }}">
+        <input required type="text" class="form-control" name="patrimonio[num_patrimonial]" value="{{ model.Patrimonio.num_patrimonial }}">
     </div>
     <div class="col-xs-3">
         <label class="control-label" for="4">
             Serial
         </label>
-        <input required type="text" class="form-control" name="patrimonio[serial]" value={{ objeto.Patrimonio.serial }}>
+        <input required type="text" class="form-control" name="patrimonio[serial]" value={{ model.Patrimonio.serial }}>
     </div>
     <div class="col-xs-4">
         <label class="control-label" for="4">
@@ -52,8 +52,8 @@
         </label>
         <select class="js-example-basic-single form-control" name="patrimonio[funcionario_id]" id="1">
             <option value='0'>Não Possui</option>
-            {% if objeto %}
-                <option value="{{  objeto.Patrimonio.funcionario_id }}" selected> {{ objeto.Patrimonio.Funcionario.nome }} || {{  objeto.Patrimonio.Funcionario.Setor.nome }}</option>
+            {% if model %}
+                <option value="{{  model.Patrimonio.funcionario_id }}" selected> {{ model.Patrimonio.Funcionario.nome }} || {{  model.Patrimonio.Funcionario.Setor.nome }}</option>
             {% endif %}
             {% for funcionario in funcionarios %}
                 <option value="{{  funcionario.id }}"> {{ funcionario.nome }} || {{  funcionario.Setor.nome }}</option>
@@ -65,8 +65,8 @@
             Local
         </label>
         <select class="js-example-basic-single form-control" name="patrimonio[local_id]" id="1">
-            {% if objeto %}
-                <option value="{{  objeto.Patrimonio.local_id }}"> {{ objeto.Patrimonio.Local.nome }}</option>
+            {% if model %}
+                <option value="{{  model.Patrimonio.local_id }}"> {{ model.Patrimonio.Local.nome }}</option>
             {% endif %}
             {% for local in locais %}
                 <option value="{{  local.id }}"> {{ local.nome }}</option>
@@ -75,5 +75,5 @@
     </div>
 </div>
 
-<input required  type="hidden" name="id" value="{{ objeto.id }}">
+<input required  type="hidden" name="id" value="{{ model.id }}">
 <br>
