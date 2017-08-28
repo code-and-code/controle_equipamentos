@@ -26,12 +26,11 @@
                                 <tr>
                                     <td>{{ entrada.id }}</td>
                                     <td>{{ entrada.qtd }}</td>
-                                    <td>{{ entrada.data_entrada }}</td>
-                                    <td>{{ entrada.nf }}</td>
+                                    <td>{{ entrada.Nfe.data_entrada }}</td>
+                                    <td>{{ entrada.Nfe.nfe }}</td>
                                     <td>{{ entrada.Equipamento.nome }} - {{ entrada.Equipamento.modelo }} - {{ entrada.Equipamento.Marca.nome }}</td>
-                                    <td>{{ entrada.Custo.nome }}</td>
+                                    <td>{{ entrada.Nfe.Custo.nome }}</td>
                                     <td>
-                                        <a href="entrada/nova-nf?id={{ entrada.id }}" class="fa fa-upload" ></a>
                                         <a href="entrada/deletar?id={{ entrada.id }}" class="fa fa-trash  text-danger" ></a>
                                     </td>
                                 </tr>

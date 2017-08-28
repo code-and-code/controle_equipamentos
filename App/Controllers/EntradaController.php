@@ -20,7 +20,6 @@ class EntradaController extends Action
     public function __construct()
     {
         $this->model   = new Entrada();
-        $this->nfe     = new Nfe();
         $this->path    = config('app.file.folder');
     }
 
@@ -28,29 +27,9 @@ class EntradaController extends Action
     {
         $equipamento = new Equipamento();
         $custo       = new Custo();
-        echo $this->render("entrada.create", ['equipamentos' => $equipamento->all(),'custos' => $custo->all()]);
+        $nfe         = new Nfe();
+        echo $this->render("entrada.create", ['equipamentos' => $equipamento->all(),'custos' => $custo->all(), 'nfes' => $nfe->all()]);
     }
-
-    public function store()
-    {
-        try{
-            Validation::requireModel($this->model,$_POST['entrada']);
-            Validation::requireModel($this->nfe,$_POST['nfe']);
-
-            $nfe = $this->nfe->create($_POST['nfe']);
-
-            $entrada = $_POST['entrada']+['nfe_id' => $nfe->id];
-
-            $this->model->create($entrada);
-
-            back('Gravado');
-
-        }catch (\Exception $e)
-        {
-            $this->fail($e);
-        }
-    }
-
 
     public function delete()
     {
@@ -69,78 +48,4 @@ class EntradaController extends Action
             $this->fail($e);
         }
     }
-
-
-    public function sendNf()
-    {
-        echo $this->render('entrada.upload',['entrada' => $this->model->find($_GET['id'])]);
-    }
-
-    public function uploadNf()
-    {
-        try{
-
-            $entrada = $this->model->find($_POST['id']);
-
-            if($entrada->file != null)
-            {
-                unlink("{$this->path}/$entrada->file");
-            }
-
-            $file       = new File($_FILES['file'],$this->path);
-
-            $nameFile   = md5(date('H:m:s:'));
-
-            $file->setName($nameFile)
-                ->mimeType(['application/pdf'])
-                ->maxSize('1MB')
-                ->upload();
-
-            $entrada->file = "{$nameFile}.{$file->getData()->extension}";
-
-            $entrada->save();
-            back('Enviado');
-
-        }catch (\Exception $e)
-        {
-            $this->fail($e);
-        }
-    }
-
-    public function deleteNf()
-    {
-        try{
-            $entrada = $this->model->find($_GET['id']);
-            unlink("{$this->path}/$entrada->file");
-
-            $entrada->file = NULL;
-            $entrada->save();
-
-            back('Excluido');
-
-        }catch (\Exception $e)
-        {
-            back($e->getMessage(),'warning');
-        }
-    }
-
-    public function downloadNf()
-    {
-        $entrada = $this->model->find($_GET['id']);
-        $nf_file = "{$this->path}/$entrada->file";
-
-        if (!file_exists($nf_file)) {
-            back('Nota fical não existe :(','warning');
-        }
-
-        header('Content-Description: File Transfer');
-        header('Content-Disposition: attachment; filename="'.$entrada->file.'"');
-        header('Content-Type: application/octet-stream');
-        header('Content-Length: ' . filesize($nf_file));
-
-        // Envia o arquivo para o cliente
-        readfile($nf_file);
-    }
-
-
 }

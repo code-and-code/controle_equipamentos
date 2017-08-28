@@ -2,13 +2,10 @@
 namespace App\Controllers;
 
 use App\Models\Custo;
-use App\Models\Entrada;
-use App\Models\Equipamento;
 use App\Models\Nfe;
 use App\Support\CrudControllerTrait;
 use Cac\Controller\Action;
 use Cac\Support\File;
-use Cac\Support\Validation;
 
 class NfeController extends Action
 {
@@ -25,19 +22,20 @@ class NfeController extends Action
 
     public function create()
     {
-        echo $this->render("nfe.create");
+        $custo       = new Custo();
+        echo $this->render("nfe.create", ['custos' => $custo->all()]);
     }
 
     public function delete()
     {
         try{
-            $entrada = $this->model->find($_GET['id']);
+            $nfe = $this->model->find($_GET['id']);
 
-            if($entrada->file != null)
+            if($nfe->file != null)
             {
-                unlink("{$this->path}/$entrada->file");
+                unlink("{$this->path}/$nfe->file");
             }
-            $entrada->delete();
+            $nfe->delete();
             back('Excluido');
 
         }catch (\Exception $e)
@@ -49,18 +47,22 @@ class NfeController extends Action
 
     public function sendNf()
     {
-        echo $this->render('entrada.upload',['entrada' => $this->model->find($_GET['id'])]);
+        $f = $this->model->find($_GET['id']);
+
+
+
+        echo $this->render('nfe.upload',['nfe' => $this->model->find($_GET['id'])]);
     }
 
     public function uploadNf()
     {
         try{
 
-            $entrada = $this->model->find($_POST['id']);
+            $nfe = $this->model->find($_POST['id']);
 
-            if($entrada->file != null)
+            if($nfe->file != null)
             {
-                unlink("{$this->path}/$entrada->file");
+                unlink("{$this->path}/$nfe->file");
             }
 
             $file       = new File($_FILES['file'],$this->path);
@@ -72,9 +74,9 @@ class NfeController extends Action
                 ->maxSize('1MB')
                 ->upload();
 
-            $entrada->file = "{$nameFile}.{$file->getData()->extension}";
+            $nfe->file = "{$nameFile}.{$file->getData()->extension}";
 
-            $entrada->save();
+            $nfe->save();
             back('Enviado');
 
         }catch (\Exception $e)
@@ -86,11 +88,11 @@ class NfeController extends Action
     public function deleteNf()
     {
         try{
-            $entrada = $this->model->find($_GET['id']);
-            unlink("{$this->path}/$entrada->file");
+            $nfe = $this->model->find($_GET['id']);
+            unlink("{$this->path}/$nfe->file");
 
-            $entrada->file = NULL;
-            $entrada->save();
+            $nfe->file = NULL;
+            $nfe->save();
 
             back('Excluido');
 
@@ -102,15 +104,15 @@ class NfeController extends Action
 
     public function downloadNf()
     {
-        $entrada = $this->model->find($_GET['id']);
-        $nf_file = "{$this->path}/$entrada->file";
+        $nfe = $this->model->find($_GET['id']);
+        $nf_file = "{$this->path}/$nfe->file";
 
         if (!file_exists($nf_file)) {
             back('Nota fical não existe :(','warning');
         }
 
         header('Content-Description: File Transfer');
-        header('Content-Disposition: attachment; filename="'.$entrada->file.'"');
+        header('Content-Disposition: attachment; filename="'.$nfe->file.'"');
         header('Content-Type: application/octet-stream');
         header('Content-Length: ' . filesize($nf_file));
 

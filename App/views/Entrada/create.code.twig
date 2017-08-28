@@ -22,34 +22,22 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label" for="9">
-                                NFe
+                            <label class="control-label" for="1">
+                                Nfe
                             </label>
-                            <input required class="form-control" id="9" placeholder="" name="nfe_id" type="text" value="">
+                            <select class="js-example-basic-single form-control col-xs-6" name="nfe_id" id="1" >
+                                {% for nfe in nfes %}
+                                    <option value="{{  nfe.id }}"> {{ nfe.nfe }}</option>
+                                {% endfor %}
+                            </select>
                         </div>
 
                         <div class="row">
                             <div class="col-xs-4">
                                 <label class="control-label" for="4">
-                                    Data Compra
-                                </label>
-                                <input required class="form-control" id="11" placeholder="" name="data_entrada" type="date" value="" >
-                            </div>
-                            <div class="col-xs-4">
-                                <label class="control-label" for="4">
                                     Qtd
                                 </label>
                                 <input required class="form-control" id="10" placeholder="" name="qtd" type="text" value="{{ model.Patrimonio.valor }}">
-                            </div>
-                            <div class="col-xs-4">
-                                <label class="control-label" for="4">
-                                    Centro De Custo
-                                </label>
-                                <select class="js-example-basic-single form-control" name="centro_custo_id" id="1" >
-                                    {% for custo in custos %}
-                                        <option value="{{  custo.id }}"> {{ custo.nome }}</option>
-                                    {% endfor %}
-                                </select>
                             </div>
                         </div>
                         <br>

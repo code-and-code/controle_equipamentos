@@ -37,10 +37,13 @@ CREATE TABLE `categorias` (
 CREATE TABLE `nfes` (
 	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
 	`nfe` INT(11) NOT NULL,
+	`data_entrada` DATE NOT NULL,
+	`centro_custo_id` INT(11) NULL DEFAULT NULL,
+	`file` VARCHAR(255) NULL DEFAULT NULL,
 	`created_at` TIMESTAMP NULL DEFAULT NULL,
 	`updated_at` TIMESTAMP NULL DEFAULT NULL,
 	PRIMARY KEY (`id`)
-)ENGINE=InnoDB;
+)COLLATE='utf8_general_ci' ENGINE=InnoDB AUTO_INCREMENT=5;
 
 # Dump of table centro_custo
 # ------------------------------------------------------------
@@ -122,8 +125,6 @@ CREATE TABLE `entradas` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `nfe_id` int(11) DEFAULT NULL,
   `qtd` int(11) DEFAULT '0',
-  `data_entrada` datetime DEFAULT NULL,
-  `file` VARCHAR (255) DEFAULT NULL,
   `equipamento_id` int(11) unsigned NOT NULL,
   `centro_custo_id` int(11) unsigned NOT NULL,
   `created_at` datetime DEFAULT NULL,
