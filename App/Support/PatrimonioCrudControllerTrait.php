@@ -57,7 +57,7 @@ trait PatrimonioCrudControllerTrait
     public function duplicate()
     {
         $obj = $this->getModelClass()->find($_GET['id']);
-        echo $this->render("{$this->getNameModel()}.create", ['locais' => $this->getLocalClass()->all(), 'funcionarios' => $this->getFuncionarioClass()->all(), 'objeto' => $obj, 'custos' => $this->getCustoClass()->all()]);
+        echo $this->render("{$this->getNameModel()}.create", ['locais' => $this->getLocalClass()->all(), 'funcionarios' => $this->getFuncionarioClass()->all(), 'model' => $obj, 'custos' => $this->getCustoClass()->all()]);
     }
 
     public function index()
@@ -99,7 +99,7 @@ trait PatrimonioCrudControllerTrait
                     'equipamentos' => $this->getEstoque(),
                     'locais' => $this->getLocalClass()->all(),
                     'funcionarios' => $this->getFuncionarioClass()->all(),
-                    'objeto' => $r,
+                    'model' => $r,
                 ]);
 
         }catch (\Exception $e)

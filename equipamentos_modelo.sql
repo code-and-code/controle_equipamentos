@@ -31,7 +31,16 @@ CREATE TABLE `categorias` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+# Dump of table nfes
+# ------------------------------------------------------------
 
+CREATE TABLE `nfes` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`nfe` INT(11) NOT NULL,
+	`created_at` TIMESTAMP NULL DEFAULT NULL,
+	`updated_at` TIMESTAMP NULL DEFAULT NULL,
+	PRIMARY KEY (`id`)
+)ENGINE=InnoDB;
 
 # Dump of table centro_custo
 # ------------------------------------------------------------
@@ -111,7 +120,7 @@ CREATE TABLE `equipamentos` (
 
 CREATE TABLE `entradas` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `nf` int(11) DEFAULT NULL,
+  `nfe_id` int(11) DEFAULT NULL,
   `qtd` int(11) DEFAULT '0',
   `data_entrada` datetime DEFAULT NULL,
   `file` VARCHAR (255) DEFAULT NULL,

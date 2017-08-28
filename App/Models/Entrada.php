@@ -5,7 +5,7 @@ namespace App\Models;
 class Entrada extends Model {
 
     protected $table      = "entradas";
-    public    $requested  = ['qtd', 'nf', 'centro_custo_id', 'equipamento_id'];
+    public    $requested  = ['qtd', 'centro_custo_id', 'equipamento_id', 'nfe_id'];
 
     public function Equipamento()
     {
@@ -15,5 +15,10 @@ class Entrada extends Model {
     public function Custo()
     {
         return $this->hasOne(Custo::class, 'centro_custo_id');
+    }
+
+    public function Nfe()
+    {
+        return $this->hasOne(Nfe::class, 'nfe_id');
     }
 }

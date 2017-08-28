@@ -10,7 +10,7 @@ use Cac\Controller\Action;
 use Cac\Support\File;
 use Cac\Support\Validation;
 
-class EntradaController extends Action
+class NfeController extends Action
 {
     public $model;
     private $path;
@@ -19,38 +19,14 @@ class EntradaController extends Action
 
     public function __construct()
     {
-        $this->model   = new Entrada();
-        $this->nfe     = new Nfe();
+        $this->model     = new Nfe();
         $this->path    = config('app.file.folder');
     }
 
     public function create()
     {
-        $equipamento = new Equipamento();
-        $custo       = new Custo();
-        echo $this->render("entrada.create", ['equipamentos' => $equipamento->all(),'custos' => $custo->all()]);
+        echo $this->render("nfe.create");
     }
-
-    public function store()
-    {
-        try{
-            Validation::requireModel($this->model,$_POST['entrada']);
-            Validation::requireModel($this->nfe,$_POST['nfe']);
-
-            $nfe = $this->nfe->create($_POST['nfe']);
-
-            $entrada = $_POST['entrada']+['nfe_id' => $nfe->id];
-
-            $this->model->create($entrada);
-
-            back('Gravado');
-
-        }catch (\Exception $e)
-        {
-            $this->fail($e);
-        }
-    }
-
 
     public function delete()
     {
