@@ -11,4 +11,5 @@ $ar["{$prefix}.edit"]      = ['route' => "/{$prefix}/editar",   'controller' => 
 $ar["{$prefix}.update"]    = ['route' => "/{$prefix}/atualizar",'controller' => $controller, 'method'=>'POST', 'auth' =>$auth,'action' => 'update'   ];
 $ar["{$prefix}.delete"]    = ['route' => "/{$prefix}/deletar",  'controller' => $controller, 'method'=>'GET',  'auth' =>$auth,'action' => 'delete'   ];
 $ar["{$prefix}.duplicate"] = ['route' => "/{$prefix}/duplicar", 'controller' => $controller, 'method'=>'GET',  'auth' =>$auth,'action' => 'duplicate'];
+$ar["{$prefix}.license"]   = ['route' => "/{$prefix}/licenca",  'controller' => $controller, 'method'=>'GET',  'auth' =>$auth,'action' => 'addLicenses'];
 

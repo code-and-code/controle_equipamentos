@@ -14,7 +14,7 @@ class Computador extends Model {
 
     public function Licencas()
     {
-        return $this->hasMany(Licenca::class);
+        return $this->hasMany(Serial::class);
     }
 
     public function Equipamento()

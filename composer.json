@@ -4,7 +4,8 @@
     "require": {
         "php": ">=5.4",
         "codeandcode/micro-fwk":  "dev-master",
-        "codeandcode/simplebase-start": "1.*"
+        "codeandcode/simplebase-start": "1.*",
+        "psr/http-message": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~5.0"

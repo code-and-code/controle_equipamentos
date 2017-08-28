@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4b8dab29a0ee6ecc1b421192f3fd5e77",
+    "hash": "004f14b4632137f6b528ed8ecab7c243",
+    "content-hash": "e6de436aff13185c84739ff4e12f35b6",
     "packages": [
         {
             "name": "codeandcode/micro-fwk",
@@ -61,16 +62,16 @@
         },
         {
             "name": "codeandcode/simplebase-start",
-            "version": "1.1",
+            "version": "1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/code-and-code/simplebase-start.git",
-                "reference": "621b96e6848e28b9627679d17bee986b927324f2"
+                "reference": "86aac7fb56ac3c5e668fa60173ebfb46ad765ae6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/code-and-code/simplebase-start/zipball/621b96e6848e28b9627679d17bee986b927324f2",
-                "reference": "621b96e6848e28b9627679d17bee986b927324f2",
+                "url": "https://api.github.com/repos/code-and-code/simplebase-start/zipball/86aac7fb56ac3c5e668fa60173ebfb46ad765ae6",
+                "reference": "86aac7fb56ac3c5e668fa60173ebfb46ad765ae6",
                 "shasum": ""
             },
             "require": {
@@ -103,7 +104,7 @@
                 "projecto inical",
                 "start"
             ],
-            "time": "2017-08-15T14:47:20+00:00"
+            "time": "2017-08-28 19:43:04"
         },
         {
             "name": "codeguy/upload",
@@ -150,7 +151,7 @@
                 "upload",
                 "validation"
             ],
-            "time": "2013-07-07T17:01:41+00:00"
+            "time": "2013-07-07 17:01:41"
         },
         {
             "name": "desarrolla2/cache",
@@ -205,7 +206,7 @@
                 "mysql",
                 "redis"
             ],
-            "time": "2017-01-18T12:58:33+00:00"
+            "time": "2017-01-18 12:58:33"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -282,7 +283,7 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2017-08-28T11:12:07+00:00"
+            "time": "2017-08-28 11:12:07"
         },
         {
             "name": "plasticbrain/php-flash-messages",
@@ -324,7 +325,57 @@
                 "messages",
                 "session"
             ],
-            "time": "2016-04-01T08:39:38+00:00"
+            "time": "2016-04-01 08:39:38"
+        },
+        {
+            "name": "psr/http-message",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2016-08-06 14:39:51"
         },
         {
             "name": "twig/twig",
@@ -586,7 +637,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2017-08-08T06:39:58+00:00"
+            "time": "2017-08-08 06:39:58"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -633,7 +684,7 @@
                     "email": "me@mikevanriel.com"
                 }
             ],
-            "time": "2017-06-03T08:32:36+00:00"
+            "time": "2017-06-03 08:32:36"
         },
         {
             "name": "phpspec/prophecy",
@@ -847,7 +898,7 @@
             "keywords": [
                 "template"
             ],
-            "time": "2015-06-21T13:50:34+00:00"
+            "time": "2015-06-21 13:50:34"
         },
         {
             "name": "phpunit/php-timer",
@@ -1657,7 +1708,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-08-24T14:43:56+00:00"
+            "time": "2017-08-24 14:43:56"
         },
         {
             "name": "webmozart/assert",

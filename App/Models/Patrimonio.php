@@ -2,7 +2,6 @@
 namespace App\Models;
 
 
-
 class Patrimonio extends Model {
 
     protected $table      = "patrimonios";

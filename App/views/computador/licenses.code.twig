@@ -1,0 +1,65 @@
+{% extends view('app') %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Serial</th>
+                            <th>Data Vencimento</th>
+                            <th>#</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for  serial in computador.Licencas %}
+                            <tr>
+                                <td>{{ serial.id }}</td>
+                                <td>{{ serial.numero }}</td>
+                                <td>{{ serial.data_vencimento }}</td>
+                                <td></td>
+                                <td>
+                                    <a href="/licenca/serial/remove-computador?id={{ serial.id }}" class="fa fa-trash text-danger" ></a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Computador | Lincença</h3>
+                </div>
+                <div class="panel-body">
+                    <form role="form" action="/licenca/serial/add-computador" method="post">
+
+                        <input type="hidden" name="computador" value="{{ computador.id }}">
+                        <div class="form-group">
+                            <label class="control-label" for="1">
+                                Licenças
+                            </label>
+                            <select class="js-example-basic-single form-control" name="serial">
+                                {% for seria in seriais %}
+                                    <option value="{{ seria.id }}"> {{ seria.licenca.nome }} || {{ seria.numero }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            Cadastrar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
