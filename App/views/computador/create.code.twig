@@ -14,6 +14,9 @@
                                 Equipamento
                             </label>
                             <select class="js-example-basic-single form-control" name="computador[equipamento_id]" id="1">
+                                {% if objeto %}
+                                    <option value="{{  objeto.equipamento_id }}"> {{ objeto.Equipamento().nome }} || {{ objeto.Equipamento().odelo }}</option>
+                                {% endif %}
                                 {% for equipamento in equipamentos %}
                                     <option value="{{  equipamento.id }}"> {{ equipamento.nome }} || {{ equipamento.modelo }}</option>
                                 {% endfor %}
@@ -24,33 +27,33 @@
                                 <label class="control-label" for="4">
                                     Placa Mãe
                                 </label>
-                                <input required class="form-control" id="4" placeholder="" name="computador[placa_mae]" type="text">
+                                <input required class="form-control" id="4" placeholder="" name="computador[placa_mae]" type="text" value="{{ objeto.placa_mae }}">
                             </div>
                             <div class="col-xs-3">
                                 <label class="control-label" for="4">
                                     Memória
                                 </label>
-                                <input required class="form-control" id="3" placeholder="" name="computador[memoria]" type="text">
+                                <input required class="form-control" id="3" placeholder="" name="computador[memoria]" type="text" value="{{ objeto.memoria }}">
                             </div>
                             <div class="col-xs-4">
                                 <label class="control-label" for="4">
                                     Processador
                                 </label>
-                                <input required class="form-control" id="6" placeholder="" name="computador[processador]" type="text">
+                                <input required class="form-control" id="6" placeholder="" name="computador[processador]" type="text" value="{{ objeto.processador }}">
                             </div>
                             <div class="col-xs-2">
                                 <label class="control-label" for="4">
                                     HD
                                 </label>
-                                <input required class="form-control" id="5" placeholder="" name="computador[hd]" type="text">
+                                <input required class="form-control" id="5" placeholder="" name="computador[hd]" type="text" value="{{ objeto.hd }}">
                             </div>
                         </div>
-                        </br>
+                                           </br>
                         <div class="form-group">
                             <label class="control-label" for="7">
                                 Placa De Vídeo
                             </label>
-                            <input required class="form-control" id="7" placeholder="" name="computador[placa_video]" type="text">
+                            <input required class="form-control" id="7" placeholder="" name="computador[placa_video]" type="text" value="{{ objeto.placa_video }}">
                         </div>
 
                             {% include('patrimonio/_inputs_patrimonio.code.twig') %}

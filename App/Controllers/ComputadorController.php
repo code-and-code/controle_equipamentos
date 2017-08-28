@@ -18,5 +18,4 @@ class ComputadorController extends Action
         $this->model = new Computador();
         $this->categoria = 'computador';
     }
-
 }
