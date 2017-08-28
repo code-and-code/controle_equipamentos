@@ -6,6 +6,7 @@ use App\Models\Custo;
 use App\Models\Equipamento;
 use App\Models\Funcionario;
 use App\Models\Local;
+use App\Models\Nfe;
 use App\Models\Patrimonio;
 use Cac\Exception\ModelException;
 use Cac\Support\Validation;
@@ -49,6 +50,10 @@ trait PatrimonioCrudControllerTrait
         return new Custo();
     }
 
+    public function getNfe(){
+        return new Nfe();
+    }
+
     public function getCategory()
     {
         return $this->categoria;
@@ -67,7 +72,13 @@ trait PatrimonioCrudControllerTrait
 
     public function create()
     {
-        echo $this->render("{$this->getNameModel()}.create", ['equipamentos' => $this->getEstoque(), 'locais' => $this->getLocalClass()->all(), 'funcionarios' => $this->getFuncionarioClass()->all(), 'custos' => $this->getCustoClass()->all()]);
+        echo $this->render("{$this->getNameModel()}.create", [
+            'equipamentos' => $this->getEstoque(),
+            'locais' => $this->getLocalClass()->all(),
+            'funcionarios' => $this->getFuncionarioClass()->all(),
+            'custos' => $this->getCustoClass()->all(),
+            'nfes' =>  $this->getNfe()->all()
+        ]);
     }
 
     public function store()

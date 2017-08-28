@@ -1,10 +1,20 @@
-<div class="form-group">
-    <label class="control-label" for="9">
-        NFe
-    </label>
-    <input required class="form-control" id="9" placeholder="" name="patrimonio[nfe]" type="text" value="{{ model.Patrimonio.nfe }}">
+<div class="row">
+    <div class="col-xs-12">
+        <label class="control-label" for="4">
+            Nfe
+        </label>
+        <select class="js-example-basic-single form-control" name="patrimonio[centro_custo_id]" id="1" >
+            {% if model %}
+                <option value="{{  model.Patrimonio.nfe }}"> {{ model.Patrimonio.nfe }}</option>
+            {% endif %}
+            {% for nfe in nfes %}
+                <option value="{{  nfe.nfe }}"> {{ nfe.nfe }}</option>
+            {% endfor %}
+        </select>
+    </div>
 </div>
 
+<br/>
 <div class="row">
     <div class="col-xs-4">
         <label class="control-label" for="4">
