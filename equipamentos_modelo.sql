@@ -120,7 +120,7 @@ CREATE TABLE `equipamentos` (
 
 CREATE TABLE `entradas` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `nf` int(11) DEFAULT NULL,
+  `nfe_id` int(11) DEFAULT NULL,
   `qtd` int(11) DEFAULT '0',
   `data_entrada` datetime DEFAULT NULL,
   `file` VARCHAR (255) DEFAULT NULL,
