@@ -1,0 +1,46 @@
+{% extends view('app') %}
+
+{% block content %}
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Entradas <a href="/entrada/novo" class="fa fa-plus pull-right"></a></h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Qtd</th>
+                                <th>Entrada</th>
+                                <th>Número nota</th>
+                                <th>Equipamento</th>
+                                <th>Crentro de Custo</th>
+                                <th>#</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for  entrada in results %}
+                                <tr>
+                                    <td>{{ entrada.id }}</td>
+                                    <td>{{ entrada.qtd }}</td>
+                                    <td>{{ entrada.data_entrada }}</td>
+                                    <td>{{ entrada.nf }}</td>
+                                    <td>{{ entrada.Equipamento.nome }} - {{ entrada.Equipamento.modelo }} - {{ entrada.Equipamento.Marca.nome }}</td>
+                                    <td>{{ entrada.Custo.nome }}</td>
+                                    <td>
+                                        <a href="entrada/nova-nf?id={{ entrada.id }}" class="fa fa-upload" ></a>
+                                        <a href="entrada/deletar?id={{ entrada.id }}" class="fa fa-trash  text-danger" ></a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
