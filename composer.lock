@@ -209,16 +209,16 @@
         },
         {
             "name": "phpmailer/phpmailer",
-            "version": "v5.2.24",
+            "version": "v5.2.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "22d04c6a58145a244696f3f254c1875aa653b26a"
+                "reference": "2baf20b01690fba8cf720c1ebcf9b988eda50915"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/22d04c6a58145a244696f3f254c1875aa653b26a",
-                "reference": "22d04c6a58145a244696f3f254c1875aa653b26a",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/2baf20b01690fba8cf720c1ebcf9b988eda50915",
+                "reference": "2baf20b01690fba8cf720c1ebcf9b988eda50915",
                 "shasum": ""
             },
             "require": {
@@ -282,7 +282,7 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2017-07-26T21:00:20+00:00"
+            "time": "2017-08-28T11:12:07+00:00"
         },
         {
             "name": "plasticbrain/php-flash-messages",
@@ -945,7 +945,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2017-08-20T05:47:52+00:00"
+            "time": "2017-08-20 05:47:52"
         },
         {
             "name": "phpunit/phpunit",
@@ -1027,7 +1027,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-08-18T07:34:02+00:00"
+            "time": "2017-08-18 07:34:02"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1607,19 +1607,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "1395ddba6f65bf46cdf1d80d59223cbab8ff3ccc"
+                "reference": "5a58daa633a14651d7b2a34613c9b62c02faf873"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/1395ddba6f65bf46cdf1d80d59223cbab8ff3ccc",
-                "reference": "1395ddba6f65bf46cdf1d80d59223cbab8ff3ccc",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/5a58daa633a14651d7b2a34613c9b62c02faf873",
+                "reference": "5a58daa633a14651d7b2a34613c9b62c02faf873",
                 "shasum": ""
             },
             "require": {
                 "php": "^5.5.9|>=7.0.8"
             },
+            "conflict": {
+                "symfony/console": "<3.4"
+            },
             "require-dev": {
-                "symfony/console": "~2.8|~3.0|~4.0"
+                "symfony/console": "~3.4|~4.0"
             },
             "suggest": {
                 "symfony/console": "For validating YAML files using the lint command"
@@ -1654,7 +1657,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-08-04 13:29:48"
+            "time": "2017-08-24T14:43:56+00:00"
         },
         {
             "name": "webmozart/assert",
