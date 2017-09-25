@@ -65,6 +65,7 @@ class NfeController extends Action
                 unlink("{$this->path}/$nfe->file");
             }
 
+
             $file       = new File($_FILES['file'],$this->path);
 
             $nameFile   = md5(date('H:m:s:'));
