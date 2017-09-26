@@ -5,7 +5,7 @@ namespace App\Models;
 class Entrada extends Model {
 
     protected $table      = "entradas";
-    public    $requested  = ['qtd', 'centro_custo_id', 'equipamento_id', 'nfe_id'];
+    public    $requested  = ['qtd', 'centro_custo_id', 'equipamento_id'];
 
     public function Equipamento()
     {
