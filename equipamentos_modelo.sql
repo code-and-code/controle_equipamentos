@@ -126,7 +126,6 @@ CREATE TABLE `entradas` (
   `nfe_id` int(11) DEFAULT NULL,
   `qtd` int(11) DEFAULT '0',
   `equipamento_id` int(11) unsigned NOT NULL,
-  `centro_custo_id` int(11) unsigned NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
