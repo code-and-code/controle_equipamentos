@@ -1,18 +1,5 @@
 # Equipamento with START FWK
 
-## Introdução
-
-Start é um micro framework de aplicação web. Acreditamos que o desenvolvimento deve ser uma experiência agradável e eficiente.
-O Start tenta facilitar a vida do desenvolvedor iniciante, disponibilizando os seguintes recursos:
-
-    Banco de dados ORM expressivo e intuitivo 
-    Vários back-ends para armazenamento de sessão e cache
-    Motor de renderização simples e rápido
-    Sistemas de autenticação
-    Sistemas de rotas
-    Envio de email
-    Sistema de upload
-    
 ## Instalação
 
 #### 1 - Dependências do Projeto
